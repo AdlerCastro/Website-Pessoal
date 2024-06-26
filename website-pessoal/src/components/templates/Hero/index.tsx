@@ -2,9 +2,14 @@ import { sections } from "@/constants/sections"
 import './style.css'
 
 const Hero = () => {
+    const style = {
+        fontSize: 'small',
+    };
+
   return (
     <section id={sections.hero} className="footer">
-        <h1>Hero</h1>
+        <p>Teste</p>
+        <p style={style}>Desenvolvido por Adler Castro</p>
     </section>
   )
 }
