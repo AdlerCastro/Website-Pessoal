@@ -1,64 +1,67 @@
-:root{
+:root {
     --background-header: linear-gradient(135deg, #5907a1 35%, #073eb6ce);
     --background: black;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.Header{
+.Header {
     background: var(--background-header);
     width: 100%;
 }
 
-.Nav{
+.Nav {
     display: flex;
-    height: 9rem;
     justify-content: space-between;
     align-items: center;
+    padding-inline: 5px;
+    margin-right: 2rem;
 }
 
-#image{
+#image {
     width: 5rem;
     height: 5rem;
-    
+}
+
+.LinkImage {
+    justify-items: flex-end;
 }
 
 a {
     text-decoration: none;
 }
 
-#ButtonNav{
-    background: linear-gradient(45deg, red, blue);
-    color: white ;
+#ButtonNav {
+    background: transparent;
+    color: white;
     border: none;
-    padding: 5px;
-    border-radius: 5px;
     display: none;
-    align-items: center;
+    align-content: center;
     justify-content: center;
     cursor: pointer;
     background-size: 100%;
+    font-size: medium;
 }
 
-.Nav-list{
-    gap: 32px;
+.Nav-list {
+    gap: 4rem;
     display: flex;
     list-style: none;
-    margin-right: 2rem;
+    flex-direction: row;
 }
 
-.Nav-list a{
+.Nav-list a {
     color: white;
     padding-block: 1rem;
+    font-size: large;
 }
 
-@media (max-width: 750px) {
-    .Nav-list{
-        /* Posição */
-        position: fixed;
+@media (max-width: 767px) {
+    .Nav-list {
+        /* position: fixed;
         margin: 0;
         top: 0;
         right: 0;
@@ -68,22 +71,44 @@ a {
         clip-path: circle(100px at 90% -15%);
         transition: 1s ease-out;
 
-        /* Ajustes da coluna */
+
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
         gap: 0;
-        pointer-events: none;
+        pointer-events: none;*/
 
-        /*  Ativado */
-        .Nav.active .Nav-list{
-            clip-path: circle(1500px at 90% -15%);
-            pointer-events: all;
-        }
+        display: none;
     }
 
-    #ButtonNav{
+    .Nav-Mobile{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        list-style: none;
+        row-gap: 4rem;
+        width: 40vw;
+        height: 100vh;
+        align-items: center;
+        top: 0;
+        right: 0;
+        justify-content: space-around;
+        clip-path: ellipse(40vw 90vh at 100% );
+        background: var(--background);
+    }
+
+    .Nav-Mobile a{
+        color: white;
+    }
+
+    #ButtonNav {
         display: block;
         z-index: 1;
+    }
+}
+
+@media (min-width: 768px){
+    .Nav-Mobile{
+        display: none;
     }
 }
