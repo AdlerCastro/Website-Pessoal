@@ -6,7 +6,7 @@ import { ButtonProps } from "./type"
 import { IoMenuOutline } from "react-icons/io5";
 
 export default {
-    title: "Components/Atoms/ButtonNav",
+    title: "Components/Organisms/Header/Components/ButtonNav",
     component: ButtonNav,
 }as Meta<ButtonProps>
 
