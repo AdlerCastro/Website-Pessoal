@@ -12,25 +12,6 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    transition: all;
-}
-
-#Menu{
-    display: block;
-}
-
-#image{
-    display: none;
-    object-fit: cover;
-    width: var(--width-image);
-    height: var(--height-image);
-}
-
-.LinksNav{
-    display: none;
-    flex-direction: column;
-    color: white;
-    font-size: small;
 }
 
 p{
@@ -44,8 +25,5 @@ p{
 @media screen and (min-width: 768px) {
     #image{
         display: block;
-    }
-    #Menu{
-        display: none;
     }
 }

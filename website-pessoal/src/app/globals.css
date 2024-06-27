@@ -3,6 +3,11 @@
     --color-default: #ffffff;
 }
 
+*{
+  margin: 0;
+  padding: 0;
+}
+
 body {
   color: var(--color-default) ;
   background: var(--background-color) ;

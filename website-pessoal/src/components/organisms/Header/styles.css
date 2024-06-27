@@ -1,0 +1,89 @@
+:root{
+    --background-header: linear-gradient(135deg, #5907a1 35%, #073eb6ce);
+    --background: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.Header{
+    background: var(--background-header);
+    width: 100%;
+}
+
+.Nav{
+    display: flex;
+    height: 9rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#image{
+    width: 5rem;
+    height: 5rem;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+#ButtonNav{
+    background: linear-gradient(45deg, red, blue);
+    color: white ;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: 100%;
+}
+
+.Nav-list{
+    gap: 32px;
+    display: flex;
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.Nav-list a{
+    color: white;
+    padding-block: 1rem;
+}
+
+@media (max-width: 750px) {
+    .Nav-list{
+        /* Posição */
+        position: fixed;
+        margin: 0;
+        top: 0;
+        right: 0;
+        width: 40vw;
+        height: 100vh;
+        background: var(--background);
+        clip-path: circle(100px at 90% -15%);
+        transition: 1s ease-out;
+
+        /* Ajustes da coluna */
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        gap: 0;
+        pointer-events: none;
+
+        /*  Ativado */
+        .Nav.active .Nav-list{
+            clip-path: circle(1500px at 90% -15%);
+            pointer-events: all;
+        }
+    }
+
+    #ButtonNav{
+        display: block;
+        z-index: 1;
+    }
+}
