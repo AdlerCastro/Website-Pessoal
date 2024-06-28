@@ -1,4 +1,4 @@
-import {forwardRef, Ref} from 'react';
+import { forwardRef, Ref } from 'react';
 import { ButtonProps } from './type';
 import { Slot } from '@radix-ui/react-slot';
 import './styles.css'
@@ -13,5 +13,7 @@ const ButtonNav = forwardRef((props:ButtonProps, ref:Ref<HTMLButtonElement>) => 
     </Component>
   )
 }) 
+
+ButtonNav.displayName = 'ButtonNav';
 
 export default ButtonNav
