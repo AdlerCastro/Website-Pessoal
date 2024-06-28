@@ -1,5 +1,5 @@
 :root {
-    --background-hero: rgb(0, 0, 0);
+    --background-hero: rgba(41, 31, 31, 0.589);
     --color-hero: rgb(255, 255, 255);
     --size-default: medium; 
     --width-image: 100%;
@@ -12,6 +12,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: calc(100vh - 10rem);
 }
 
 p{
