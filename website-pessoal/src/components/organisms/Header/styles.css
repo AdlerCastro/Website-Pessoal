@@ -95,6 +95,7 @@ a {
         justify-content: space-around;
         clip-path: ellipse(40vw 90vh at 100% );
         background: var(--background);
+        transition: 1s ease-in;
     }
 
     .Nav-Mobile a{
@@ -102,6 +103,9 @@ a {
     }
 
     #ButtonNav {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
         display: block;
         z-index: 1;
     }
