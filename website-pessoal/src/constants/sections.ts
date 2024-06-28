@@ -1,6 +1,7 @@
 export const sections = {
-    hero: 'hero',
-    header: 'header',
-    about: 'about',
+    Hero: 'Hero',
+    Projects: 'Projects',
+    Contacts: 'Contacts',
+    About: 'About',
     footer: 'footer'
 }
