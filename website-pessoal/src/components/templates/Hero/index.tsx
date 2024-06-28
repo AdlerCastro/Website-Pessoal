@@ -6,8 +6,8 @@ import './style.css'
 const Hero = () => {
 
   return (
-    <section id={sections.hero} className="hero">
-
+    <section id={sections.Hero} className="hero">
+      
     </section>
   )
 }
