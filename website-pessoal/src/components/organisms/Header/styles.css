@@ -8,60 +8,123 @@
     padding: 0;
 }
 
-.Header {
+.header {
     background: var(--background-header);
     width: 100%;
 }
 
-.Nav {
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-inline: 5px;
-    margin-right: 2rem;
+    padding-inline: 1rem;
+    padding-top: 5rem;
 }
 
 #image {
-    width: 5rem;
-    height: 5rem;
+    width: 100%;
+    height: 100%;
 }
 
 .LinkImage {
-    justify-items: flex-end;
+    height: 5rem;
+    z-index: 1;
 }
 
 a {
     text-decoration: none;
 }
 
-#ButtonNav {
-    background: transparent;
-    color: white;
-    border: none;
-    display: none;
-    align-content: center;
-    justify-content: center;
-    cursor: pointer;
-    background-size: 100%;
-    font-size: medium;
-}
-
-.Nav-list {
+.menu {
     gap: 4rem;
     display: flex;
+    justify-items: flex-end;
+    list-style: none;
+    flex-direction: row;
+    margin-right: 2rem;
+}
+
+.menu-list{
+    gap: 4rem;
+    display: flex;
+    justify-items: flex-end;
     list-style: none;
     flex-direction: row;
 }
 
-.Nav-list a {
+.menu a {
     color: white;
     padding-block: 1rem;
-    font-size: large;
+    font-size: medium;
 }
 
-@media (max-width: 767px) {
-    .Nav-list {
-        /* position: fixed;
+.label-menu, .checkbox{
+    display: none;
+    right: 0;
+    top: 0;
+}
+
+@media (max-width: 500px){
+    .menu{
+        padding-inline: 2rem;
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 1023px) {
+
+    .menu{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+
+        width: 40vw;
+        height: 100vh;
+        row-gap: 4rem;
+        top: 0;
+        right: 0;
+        padding-left: 2rem;
+        margin-right: 0;
+
+        clip-path: ellipse(0vw 1vh at 100% 0%);
+        background: var(--background);
+        transition: 0.3s;
+        visibility: hidden;
+        overflow-y: hidden;
+    }
+
+    .menu-list{
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        list-style: none;
+    }
+
+    .checkbox:checked ~ .menu{
+        clip-path: ellipse(100% 100% at 100%);
+        visibility: visible;
+        overflow: auto;
+    }
+
+    .label-menu{
+        position: fixed;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 1rem;
+        color: white;
+        cursor: pointer;
+        text-align: center;
+        z-index: 1;
+    }
+
+    /* .menu {
+        position: fixed;
         margin: 0;
         top: 0;
         right: 0;
@@ -76,12 +139,12 @@ a {
         justify-content: space-around;
         align-items: center;
         gap: 0;
-        pointer-events: none;*/
+        pointer-events: none;
 
         display: none;
-    }
+    } */
 
-    .Nav-Mobile{
+    /* .Nav-Mobile{
         position: absolute;
         display: flex;
         flex-direction: column;
@@ -95,24 +158,30 @@ a {
         justify-content: space-around;
         clip-path: ellipse(40vw 90vh at 100% );
         background: var(--background);
-        transition: 1s ease-in;
-    }
+        transition: 0.5s;
+    } 
 
     .Nav-Mobile a{
         color: white;
     }
 
-    #ButtonNav {
+    /* #ButtonNav {
         position: absolute;
         right: 1rem;
         top: 1rem;
         display: block;
         z-index: 1;
-    }
+    } */
 }
 
-@media (min-width: 768px){
-    .Nav-Mobile{
-        display: none;
-    }
-}
+/* #ButtonNav {
+    background: transparent;
+    color: white;
+    border: none;
+    display: none;
+    align-content: center;
+    justify-content: center;
+    cursor: pointer;
+    background-size: 100%;
+    font-size: medium;
+} */
