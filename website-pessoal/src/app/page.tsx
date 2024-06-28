@@ -1,12 +1,13 @@
 import Hero from "@/components/templates/Hero";
-import Image from "next/image";
 import Header from "@/components/organisms/Header";
+import Footer from "@/components/templates/Footer";
 
 export default function Home() {
   return (
     <>
       <Header/>
-      {/* <Hero/> */}
+      <Hero/>
+      <Footer />
     </>
   );
 }
