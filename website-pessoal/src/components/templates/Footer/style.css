@@ -1,5 +1,5 @@
 :root {
-    --background-footer: rgb(31, 0, 59);
+    --background-footer: rgb(17, 17, 17);
     --color-footer: rgb(255, 255, 255);
 }
 
@@ -9,11 +9,37 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    height: 40vh;
+    justify-content: center;
+    border-top: 2px solid;
+    border-color: rgb(77, 77, 77);
+    padding-top: 3rem;
+    padding-bottom: 0.5rem;
 }
 
-p{
-    --size-default: medium; 
-    font-size: var(--size-default)
+.Contatos{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding-bottom: 3rem;
+    margin-bottom: 1rem;
+
+    border-bottom: 1px solid;
+    border-color: black;
+}
+
+.SocialMedia{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+}
+
+a{
+    color: var(--color-footer);
+}
+
+#whatsapp{
+    font-size: xx-large;
 }
