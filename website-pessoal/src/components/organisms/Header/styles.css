@@ -26,7 +26,7 @@ a {
 .menu-list{
     gap: 4rem;
     display: flex;
-    justify-items: flex-end;
+    justify-items: center;
     list-style: none;
     flex-direction: row;
     font-size: larger;
@@ -36,6 +36,7 @@ a {
     color: white;
     padding-block: 1rem;
     font-size: medium;
+    cursor: pointer;
 }
 
 .label-menu, .checkbox{
@@ -53,7 +54,7 @@ a {
 @media (max-width: 1023px) {
 
     .menu{
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         justify-content: space-around;
@@ -101,65 +102,4 @@ a {
         z-index: 1;
     }
 
-    /* .menu {
-        position: fixed;
-        margin: 0;
-        top: 0;
-        right: 0;
-        width: 40vw;
-        height: 100vh;
-        background: var(--background);
-        clip-path: circle(100px at 90% -15%);
-        transition: 1s ease-out;
-
-
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        gap: 0;
-        pointer-events: none;
-
-        display: none;
-    } */
-
-    /* .Nav-Mobile{
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        row-gap: 4rem;
-        width: 40vw;
-        height: 100vh;
-        align-items: center;
-        top: 0;
-        right: 0;
-        justify-content: space-around;
-        clip-path: ellipse(40vw 90vh at 100% );
-        background: var(--background);
-        transition: 0.5s;
-    } 
-
-    .Nav-Mobile a{
-        color: white;
-    }
-
-    /* #ButtonNav {
-        position: absolute;
-        right: 1rem;
-        top: 1rem;
-        display: block;
-        z-index: 1;
-    } */
 }
-
-/* #ButtonNav {
-    background: transparent;
-    color: white;
-    border: none;
-    display: none;
-    align-content: center;
-    justify-content: center;
-    cursor: pointer;
-    background-size: 100%;
-    font-size: medium;
-} */

@@ -21,23 +21,14 @@ const Header = () => {
                 <label htmlFor="checkbox" className='label-menu'>
                     <IoMenuOutline />
                 </label>
-                {/* <ButtonNav onClick={toggleActive} id="ButtonNav"><IoMenuOutline /></ButtonNav> */}
                 <ul className="menu">
                     <div className="menu-list">
                         <li><Link onClick={() => scrollTo("About")}>Sobre</Link></li>
                         <li><Link onClick={() => scrollTo("Projects")}>Projetos</Link></li>
-                        <li><Link onClick={() => scrollTo("Contacts")}>Contatos</Link></li>
-                        <li><Link onClick={() => scrollTo("footer")}>Footer</Link></li>
+                        <li><Link onClick={() => scrollTo("Footer")}>Contatos</Link></li>
                     </div>
                 </ul>
             </nav>
-            {/* {active && (
-                <ul className="Nav-Mobile">
-                    <li><Link href="https://google.com" target="_blank">Sobre</Link></li>
-                    <li><Link href="https://google.com" target="_blank">Projetos</Link></li>
-                    <li><Link href="https://google.com" target="_blank">Contatos</Link></li>
-                </ul>
-            )} */}
         </header>
     )
 }
