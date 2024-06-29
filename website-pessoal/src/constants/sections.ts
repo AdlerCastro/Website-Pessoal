@@ -3,5 +3,5 @@ export const sections = {
     Projects: 'Projects',
     Contacts: 'Contacts',
     About: 'About',
-    footer: 'footer'
+    Footer: 'Footer'
 }
