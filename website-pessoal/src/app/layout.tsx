@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import Footer from "@/components/templates/Footer";
 
 export const metadata: Metadata = {
   title: "Forum: Adler Castro",
@@ -14,6 +15,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>{children}</body>
+      <Footer/>
     </html>
   );
 }
