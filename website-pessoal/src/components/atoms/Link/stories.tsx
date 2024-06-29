@@ -11,7 +11,7 @@ type Story = StoryObj<LinkProps>
 
 export const Default:Story = {
     args:{
-        href: "https://zenithinova.com.br",
-        children: "Explore mais o universo da Zenith"
+        href: "https://github.com/AdlerCastro/Website-Pessoal",
+        children: "Adler Castro"
     }
 }
