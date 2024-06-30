@@ -1,30 +1,55 @@
 :root {
-    --background-hero: rgba(41, 31, 31, 0.589);
+    /* Senhor dos Aneis */
+    /* --background-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #512DA8, #8E24AA, #E040FB); */
+
+    /* Guardioes da Galaxia vol. 1 */
+    --background-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #00ACC1, #00796B, #4CAF50);
     --color-hero: rgb(255, 255, 255);
-    --size-default: medium; 
+    --size-default: medium;
     --width-image: 100%;
     --height-image: 100%;
 }
 
-.hero{
-    background-color: var(--background-hero);
+.hero {
+    background: var(--background-hero);
     color: var(--color-hero);
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: calc(100vh - 10rem);
+    height: 100vh;
+    background-size: 400% 400%;
+    transition: all;
+    animation: gradient 15s ease infinite;
 }
 
-p{
+.bodyHero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0%;
+}
+
+p {
     font-size: var(--size-default)
 }
 
-/* @media screen and (min-width: 375px) {
-    
-} */
-
 @media screen and (min-width: 768px) {
-    #image{
+    #image {
         display: block;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
     }
 }
