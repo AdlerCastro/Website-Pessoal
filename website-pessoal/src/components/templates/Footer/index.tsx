@@ -1,8 +1,7 @@
 import { sections } from '@/constants/sections';
 import Image from 'next/image';
-import Link from '@/components/atoms/Link';
+import SocialMediaButton from '@/components/atoms/SocialMediaButton';
 
-import GithubIcon from 'public/icons/GithubIcon.svg'
 import EmailIcon from 'public/icons/EmailIcon.svg'
 import InstagramIcon from 'public/icons/InstagramIcon.svg'
 import LinkedInIcon from 'public/icons/LinkedInIcon.svg'
@@ -20,10 +19,13 @@ const Footer = () => {
       <div className='Contatos'>
         <h1>Contacts</h1>
         <div className='SocialMedia'>
-          <Link href='https://www.instagram.com/adler_castro/' target='_blank'><Image src={InstagramIcon} alt='Instagram' /></Link>
-          <Link href='https://www.linkedin.com/in/adler-augustus-de-castro-mota/' target='_blank'><Image src={LinkedInIcon} alt='LinkedIn' /></Link>
-          <Link id='whatsapp' target='_blank'><MdWhatsapp /></Link>
-          <Link target='_blank'><Image src={EmailIcon} alt='Email' /></Link>
+          <SocialMediaButton className='SocialMediaButtons' href='https://www.instagram.com/adler_castro/' target='_blank'><Image className='icons' src={InstagramIcon} alt='Instagram' /></SocialMediaButton>
+
+          <SocialMediaButton className='SocialMediaButtons' href='https://www.linkedin.com/in/adler-augustus-de-castro-mota/' target='_blank'><Image className='icons' src={LinkedInIcon} alt='LinkedIn' /></SocialMediaButton>
+
+          <SocialMediaButton id='whatsapp' target='_blank'><MdWhatsapp /></SocialMediaButton>
+          
+          <SocialMediaButton className='SocialMediaButtons' target='_blank'><Image className='icons' src={EmailIcon} alt='Email' /></SocialMediaButton>
         </div>
       </div>
       <p style={style}>Desenvolvido por Adler Castro</p>
