@@ -1,11 +1,11 @@
 :root {
     --background-footer: rgb(17, 17, 17);
-    --color-footer: rgb(255, 255, 255);
+    --text-color: rgb(255, 255, 255);
 }
 
 .footer{
     background-color: var(--background-footer);
-    color: var(--color-footer);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -33,7 +33,24 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    
     gap: 2rem;
+}
+
+.SocialMediaButtons{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.SocialMediaButtons:hover{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.1);
+}
+
+.icons{
+    width: 28px;
+    height: 28px;
 }
 
 a{
@@ -42,4 +59,29 @@ a{
 
 #whatsapp{
     font-size: xx-large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: scale(1.1);
+}
+
+#whatsapp:hover{
+    transition: 0.1s ease-in-out;
+    transform: scale(1.2);
+    color: rgb(0, 255, 0);
+}
+
+@media (max-width: 600px){
+    .SocialMediaButtons{
+        padding-block: 1rem
+    }
+
+    #whatsapp{
+        padding-block: 1rem
+    }
+    
+    .SocialMedia{
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0,1fr));
+    }
 }

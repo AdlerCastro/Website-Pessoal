@@ -4,7 +4,7 @@
 
     /* Guardioes da Galaxia vol. 1 */
     --background-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #00ACC1, #00796B, #4CAF50);
-    --color-hero: rgb(255, 255, 255);
+    --text-color: rgb(255, 255, 255);
     --size-default: medium;
     --width-image: 100%;
     --height-image: 100%;
@@ -12,7 +12,7 @@
 
 .hero {
     background: var(--background-hero);
-    color: var(--color-hero);
+    color: var(--text-color);
     display: flex;
     flex-direction: column;
     width: 100%;
