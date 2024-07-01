@@ -1,5 +1,5 @@
 :root {
-    --background-color: rgba(0, 0, 0, 0.450);
+    --background-color-default: rgba(0, 0, 0, 0.45);
     --color-default: #ffffff;
 }
 
@@ -10,7 +10,7 @@
 
 body {
   color: var(--color-default) ;
-  background: var(--background-color) ;
+  background: var(--background-color-default) ;
   font-size: medium;
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 100%;

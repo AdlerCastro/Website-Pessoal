@@ -1,7 +1,7 @@
 :root {
     --background-header: rgba(12, 12, 12, 0.822);
     --background-menu: black;
-    --text-color: white;
+    --text-color-menu: white;
 }
 
 * {
@@ -44,10 +44,11 @@ a {
 
 .menu{
     width: 100%;
+    padding-block: 5px;
 }
 
 .menu a {
-    color: var(--text-color);
+    color: var(--text-color-menu);
     padding-block: 1rem;
     font-size: large;
     cursor: pointer;

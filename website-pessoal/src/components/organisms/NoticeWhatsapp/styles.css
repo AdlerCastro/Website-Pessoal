@@ -1,7 +1,7 @@
 :root{
     --background-notice: rgba(59, 59, 59, 0.966);
     --color-border-notice: rgb(52, 243, 52);
-    --text-color: white;
+    --text-color-NoticeWhatsapp: white;
 
     --background-profile: linear-gradient(125deg,rgb(255, 0, 0), rgb(0, 0, 255));
 }
@@ -20,7 +20,7 @@
 }
 
 #Link{
-    color: var(--text-color);
+    color: var(--text-color-NoticeWhatsapp);
     transition: 0.5s ease-in-out;
 }
 
