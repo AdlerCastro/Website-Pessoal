@@ -1,7 +1,7 @@
 'use client'
 
 import Header from '@/components/organisms/Header'
-import './globals.css'
+import './forms.css'
 
 import { useState } from 'react'
 import emailjs from '@emailjs/browser'
