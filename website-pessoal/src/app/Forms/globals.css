@@ -1,0 +1,53 @@
+:root{
+    --background-forms: linear-gradient(to bottom, rgb(9, 32, 63), #537895);
+    --text-color: ;
+}
+
+.body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.spaceForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 0%;
+    width: 100%;
+    background: var(--background-forms);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    gap: 2rem;
+    padding: 2rem;
+    border-radius: 5%;
+    background: rgba(17, 17, 17, 0.747);;
+}
+
+.form input{
+    width: 100%;
+    height: 2rem;
+    color: black;
+    background: white;
+}
+
+.form textarea{
+    width: 100%;
+    height: 5rem;
+    color: black;
+    background: white;
+}
+
+/* .button{
+    
+} */
