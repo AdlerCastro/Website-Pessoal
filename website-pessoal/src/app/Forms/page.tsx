@@ -37,7 +37,7 @@ export default function Forms(){
     }
 
     return(
-        <div className='body'>
+        <div className='bodyForms'>
             <Header/>
             <div className='spaceForm'>
                 <form className="form" onSubmit={sendEmail} >

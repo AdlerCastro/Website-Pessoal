@@ -18,7 +18,7 @@ const Header = () => {
     return (
         <header className="header">
             <span id="borderNav"></span>
-            <nav className="nav">
+            <nav className="navHeader">
                 <input type="checkbox" className='checkbox' id='checkbox' />
                 <label htmlFor="checkbox" className='label-menu'>
                     <IoMenuOutline />

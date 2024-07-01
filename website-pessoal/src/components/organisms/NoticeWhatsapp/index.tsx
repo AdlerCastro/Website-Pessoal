@@ -6,7 +6,7 @@ import "./styles.css"
 
 const NoticeWhatsapp = () => {
     return (
-        <div className="body">
+        <div className="bodyNotice">
             <div className="Notice">
                 <div className="bgProfile"><Image src={Eu} alt="Foto de perfil" id="Eu" /></div>
                 <p>Adler Castro</p>

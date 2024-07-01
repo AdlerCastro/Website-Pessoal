@@ -16,7 +16,7 @@
     overflow: hidden
 }
 
-.nav {
+.navHeader {
     display: flex;
     justify-content: center;
     align-items: center;

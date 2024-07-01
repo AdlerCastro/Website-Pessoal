@@ -31,7 +31,7 @@
     flex: 1 1 0%;
 }
 
-p {
+.bodyHero p {
     font-size: var(--size-default);
     padding-inline: 1rem;
 }
