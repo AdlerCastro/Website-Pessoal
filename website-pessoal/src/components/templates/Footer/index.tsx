@@ -1,6 +1,7 @@
 import { sections } from '@/constants/sections';
 import Image from 'next/image';
 import SocialMediaButton from '@/components/atoms/SocialMediaButton';
+import NextLink from 'next/link';
 
 import EmailIcon from 'public/icons/EmailIcon.svg'
 import InstagramIcon from 'public/icons/InstagramIcon.svg'
@@ -25,7 +26,7 @@ const Footer = () => {
 
           <SocialMediaButton id='whatsapp' target='_blank'><MdWhatsapp /></SocialMediaButton>
           
-          <SocialMediaButton className='SocialMediaButtons' target='_blank'><Image className='icons' src={EmailIcon} alt='Email' /></SocialMediaButton>
+          <NextLink href='/Forms' className='SocialMediaButtons'><Image className='icons' src={EmailIcon} alt='Email' /></NextLink>
         </div>
       </div>
       <p style={style}>Desenvolvido por Adler Castro</p>
