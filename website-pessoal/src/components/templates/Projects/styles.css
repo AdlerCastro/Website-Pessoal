@@ -1,6 +1,8 @@
  :root {
-    --background-color-Projects: ;
+    --background-color-Projects: linear-gradient(#09203F, #111111 80%);
     --text-color-Projects: ;
+
+    --background-color-Image: linear-gradient(-45deg, #0D47A1, #1976D2, #512DA8, #8E24AA, #E040FB);
  }
 
  .bodyProjects {
@@ -9,63 +11,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    background: var(--background-color-Projects);
+    padding-block: 40px;
  }
-
- .bodyProjects h1 {
-    margin-block: 20px;
- }
-
- .card {
-    margin-block: 10px;
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-
-    background: gray;
-
- }
-
- .Image {
-    width: 100%;
-    height: 100%;
-    border-radius: 100%;
- }
-
- .ImagesDiv {
-    width: 150px;
-    height: 150px;
- }
-
- .descriptionProject {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
- }
-
- .navProjects{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    column-gap: 2rem;
-
-    font-size: larger;
- }
-
- #Forward{
-   border-radius: 100%;
-   background: white;
-   color: black;
- }
-
- #Backward{
-   transform: rotate(180deg);
-}
-
- @media(max-width: 768px) {}

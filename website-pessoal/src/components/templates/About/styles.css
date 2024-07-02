@@ -1,5 +1,5 @@
 :root{
-    --background-color-About: linear-gradient(0deg, #2269c5, #09203F 20%);
+    --background-color-About: linear-gradient(180deg, #2083bd, #09203F 50%);
     --background-description: rgba(0, 0, 0, 0.445);
     --text-color-About: white;
 }
@@ -12,6 +12,10 @@
     width: 100%;
     background: var(--background-color-About);
     color: var(--text-color-About);
+
+    border-top: 1px solid;
+    border-color: #2083bdce;
+    padding-block: 40px;
 }
 
 .description{
@@ -32,8 +36,8 @@
 }
 
 .image{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     border-radius: 100%;
     transition: 0.3s ease-in-out;
     padding: 20px;
