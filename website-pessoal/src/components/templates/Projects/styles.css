@@ -9,8 +9,12 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     flex-direction: column;
     background: var(--background-color-Projects);
     padding-block: 40px;
+ }
+
+ .bodyProjects h1{
+   padding: 10px;
+   margin-bottom: 10px;
  }
