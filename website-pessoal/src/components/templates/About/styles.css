@@ -7,8 +7,8 @@
 .about{
     display: flex;
     align-items: center;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-direction: column;
+    justify-content: center;
     width: 100%;
     background: var(--background-color-About);
     color: var(--text-color-About);
@@ -29,6 +29,10 @@
     border-radius: 5%;
 }
 
+.description h1{
+    padding-top: 15px;
+}
+
 .description p{
     align-items: center;
     justify-content: center;
@@ -43,6 +47,23 @@
     padding: 20px;
 }
 
+.Skills{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 10px;
+    gap: 2rem;
+
+    background: var(--background-description);
+    border-radius: 5%;
+}
+
+.listSkills{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+}
+
 @media(max-width: 767px){
     .about{
         flex-direction: column;
@@ -51,7 +72,13 @@
     }
 
     .description{
-        order: 1;
+        padding-block: 20px;
+        margin-top: 0;
+        margin-bottom: 20px;
+        gap: 0.5rem;
+    }
+
+    .Skills{
         padding-block: 20px;
         margin-top: 0;
         margin-bottom: 20px;
@@ -59,6 +86,7 @@
     }
 
     .image{
+        order: -1;
         width: 200px;
         height: 200px;
         margin: 10px;
@@ -68,6 +96,10 @@
 }
 
 @media(min-width: 768px){
+    .image{
+        order: -1;
+    }
+
     @media(max-width: 900px){
         .image{
             width: 300px;
@@ -76,7 +108,17 @@
     }
 }
 
-@media(min-width: 1440px){
+@media(min-width: 1024px){
+    .image{
+        order: 0;
+    }
+
+    .about{
+        flex-direction: row;
+    }
+}
+
+@media(min-width:1440px){
     .about{
         gap: 5%;
     }
@@ -84,6 +126,12 @@
     .description{
         margin-inline: 20px;
         margin-block: 0;
-        width: 60%;
+        width: 50%;
+    }
+
+    .Skills{
+        /* margin-inline: 20px; */
+        margin-block: 0;
+        width: 30%;
     }
 }
