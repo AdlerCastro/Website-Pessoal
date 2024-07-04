@@ -1,5 +1,5 @@
 :root {
-    --background-header: rgba(12, 12, 12, 0.822);
+    --background-header: rgb(12, 12, 12);
     --background-menu: black;
     --text-color-menu: white;
 }
@@ -10,10 +10,12 @@
 }
 
 .header {
-    position: relative;
+    position: sticky;
+    top: 0;
     background: var(--background-header);
     width: 100%;
-    overflow: hidden
+    overflow: hidden;
+    z-index: 10;
 }
 
 .navHeader {
