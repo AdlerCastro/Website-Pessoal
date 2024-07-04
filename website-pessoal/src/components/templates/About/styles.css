@@ -36,7 +36,8 @@
 }
 
 .description h1{
-    padding-top: 15px;
+    text-align: center;
+    font-size: x-large;
 }
 
 .description p{
@@ -63,6 +64,10 @@
 
     background: var(--background-description);
     border-radius: 5%;
+}
+
+.Skills h1{
+    text-align: center;
 }
 
 .listSkills{
