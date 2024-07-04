@@ -7,8 +7,8 @@ import Header from "@/components/organisms/Header"
 export default function Home() {
   return (
     <>
-      <Hero/>
       <Header/>
+      <Hero/>
       <About/>
       <Technologies />
       <Projects/>
