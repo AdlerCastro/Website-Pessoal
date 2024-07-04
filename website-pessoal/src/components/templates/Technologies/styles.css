@@ -1,0 +1,16 @@
+:root{
+    --background-color-Tech: linear-gradient(#09203F, #111111 80%);
+}
+
+.bodyTechnologies{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: var(--background-color-Tech);
+}
+
+.bodyTechnologies h1{
+    padding: 10px;
+    margin-bottom: 10px;
+}
