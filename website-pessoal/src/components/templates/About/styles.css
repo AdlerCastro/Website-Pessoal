@@ -4,7 +4,7 @@
     --text-color-About: white;
 }
 
-.about{
+.bodyAbout{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -16,6 +16,12 @@
     border-top: 1px solid;
     border-color: #2083bdce;
     padding-block: 40px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .description{
@@ -45,6 +51,7 @@
     border-radius: 100%;
     transition: 0.3s ease-in-out;
     padding: 20px;
+    margin-right: 20px;
 }
 
 .Skills{
@@ -65,7 +72,7 @@
 }
 
 @media(max-width: 767px){
-    .about{
+    .bodyAbout{
         flex-direction: column;
         justify-content: center;
         gap: 20px;
@@ -99,13 +106,6 @@
     .image{
         order: -1;
     }
-
-    @media(max-width: 900px){
-        .image{
-            width: 300px;
-            height: 300px;
-        }  
-    }
 }
 
 @media(min-width: 1024px){
@@ -113,25 +113,28 @@
         order: 0;
     }
 
-    .about{
+    .bodyAbout{
         flex-direction: row;
     }
 }
 
 @media(min-width:1440px){
     .about{
+        width: 70%;
+    }
+
+    .bodyAbout{
         gap: 5%;
     }
+
 
     .description{
         margin-inline: 20px;
         margin-block: 0;
-        width: 50%;
     }
 
     .Skills{
-        /* margin-inline: 20px; */
+        margin-inline: 20px;
         margin-block: 0;
-        width: 30%;
     }
 }
