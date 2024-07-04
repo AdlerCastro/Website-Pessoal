@@ -1,7 +1,5 @@
  :root {
-    --background-color-Projects: linear-gradient(#09203F, #111111 80%);
-    --text-color-Projects: ;
-
+    --background-color-Projects:  #111111;
     --background-color-Image: linear-gradient(-45deg, #0D47A1, #1976D2, #512DA8, #8E24AA, #E040FB);
  }
 
