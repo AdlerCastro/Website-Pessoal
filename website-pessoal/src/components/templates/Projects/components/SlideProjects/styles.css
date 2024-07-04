@@ -14,7 +14,7 @@
 }
 
 .slides {
-    width: 300%;
+    width: 200%;
     display: flex;
 }
 
@@ -24,7 +24,7 @@
 
 .slide{
     position: relative;
-    width: 33.33%;
+    width: 50%;
     transition: 0.5s all;
 }
 
@@ -108,40 +108,7 @@
 }
 
 #radio2:checked ~ .first{
-    margin-left: -33.33%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -66.66%;
-}
-
-.nav-auto div{
-    padding: 9px;
-    border: 2px solid white;
-    border-radius: 100%;
-    cursor: pointer;
-    transition: 0.5s all;
-}
-
-.nav-auto{
-    position: absolute;
-    width: 375px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    bottom: 0;
-}
-
-#radio1:checked ~ .nav-auto .auto-btn1{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .nav-auto .auto-btn2{
-    margin-left: -33.33%;
-}
-
-#radio3:checked ~ .nav-auto .auto-btn3{
-    margin-left: -66.66%;
+    margin-left: -50%;
 }
 
 @media(min-width: 768px) {
