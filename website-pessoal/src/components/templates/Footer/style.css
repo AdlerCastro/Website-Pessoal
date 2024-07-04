@@ -16,6 +16,32 @@
     padding-bottom: 0.5rem;
 }
 
+.Subscribe{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    gap: 40px;
+}
+
+.Subscribe h1{
+    padding-inline: 10px;
+}
+
+.GithubButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+}
+
+.iconGithub{
+    width: 100%;
+    height: 100%;
+}
+
 .Contatos{
     width: 100%;
     display: flex;
@@ -26,6 +52,11 @@
     margin-bottom: 1rem;
     border-bottom: 1px solid;
     border-color: black;
+}
+
+.Contatos h1{
+    text-align: center;
+    font-size: xx-large;
 }
 
 .SocialMedia{
@@ -77,4 +108,5 @@ a{
     #whatsapp{
         padding-block: 1rem
     }
+
 }
