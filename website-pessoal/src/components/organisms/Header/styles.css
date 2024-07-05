@@ -51,6 +51,12 @@ a {
     cursor: pointer;
 }
 
+.menu li {
+    color: var(--text-color-menu);
+    font-size: large;
+    cursor: pointer;
+}
+
 .label-menu, .checkbox{
     display: none;
     right: 0;

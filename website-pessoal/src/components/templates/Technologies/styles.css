@@ -11,10 +11,10 @@
     padding-block: 40px;
 }
 
-.bodyTechnologies h1{
+.bodyTechnologies h2{
     padding: 10px;
     margin-bottom: 10px;
-    font-size: x-large;
+    font-size: xx-large;
 }
 
 .technologies{
@@ -34,13 +34,19 @@
     padding-block: 10px;
 }
 
-.descriptionTech p{
-    text-align: center;
+.text{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
     padding: 10px;
 }
 
+.text h3{
+    font-size: x-large;
+}
+
 .Icons{
-    order: -1;
     width: 200px;
     height: 200px;
     transition: 0.3s ease-in-out;
@@ -49,8 +55,14 @@
 }
 
 .reverse{
-    order: 1;
+    order: -1;
 }
+
+@media (max-width: 400px){
+    .bodyTechnologies h2{
+       font-size: x-large;
+    }
+ }
 
 @media(max-width: 767px){
     .descriptionTech{
@@ -58,12 +70,15 @@
         flex-direction: column;
     }
 
-    .descriptionTech p{
+    .text{
         order: 1;
     }
 
+    .text p{
+        text-align: start;
+    }
+
     .Icons{
-        order: -1;
         width: 100px;
         height: 100px;
         margin: 10px;
@@ -74,11 +89,11 @@
 
 @media(min-width: 768px){
     @media(max-width: 1020px){
-        .descriptionTech p{
+        .text{
             width: 500px;
         }
     }
-    .descriptionTech p{
+    .text{
         width: 40%;
     }
 }

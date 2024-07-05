@@ -27,20 +27,53 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0.5rem;
+    gap: 1rem;
     flex: 1 1 0%;
+}
+
+.bodyHero h1 {
+    font-size: xx-large;
+    text-align: center;
 }
 
 .bodyHero p {
     font-size: var(--size-default);
     padding-inline: 1rem;
+    text-align: center;
 }
 
-@media screen and (max-width: 700px) {
-    p{
+@media (max-width: 700px) {
+    p {
         text-align: center;
         text-wrap: wrap;
     }
+}
+
+@media(min-width: 768px) {
+    .bodyHero h1 {
+        font-size: 70px;
+        text-align: center;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .bodyHero h1 {
+        font-size: 80px;
+        text-align: center;
+    }
+
+    .hero {
+        height: 96.1vh;
+    }
+}
+
+@media(min-width: 1400px) {
+    .bodyHero h1 {
+        font-size: 100px;
+        text-align: center;
+    }
+
 }
 
 @keyframes gradient {

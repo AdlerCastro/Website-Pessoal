@@ -35,9 +35,10 @@
     border-radius: 5%;
 }
 
-.description h1{
-    text-align: center;
+.description h2{
+    text-align: start;
     font-size: x-large;
+    margin-bottom: 10px;
 }
 
 .description p{
@@ -66,8 +67,9 @@
     border-radius: 5%;
 }
 
-.Skills h1{
-    text-align: center;
+.Skills h2{
+    text-align: start;
+    margin-bottom: 10px;
 }
 
 .listSkills{

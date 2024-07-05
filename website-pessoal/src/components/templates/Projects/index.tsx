@@ -7,7 +7,7 @@ import SlideProjects from "./components/SlideProjects"
 const Projects = () => {
   return (
     <section id={sections.Projects} className="bodyProjects">
-      <h1>Projetos desenvolvidos</h1>
+      <h2>Projetos desenvolvidos</h2>
       <SlideProjects></SlideProjects>
     </section>
   )

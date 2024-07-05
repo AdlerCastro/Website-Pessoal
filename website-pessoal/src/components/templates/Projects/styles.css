@@ -12,8 +12,14 @@
     padding-block: 40px;
  }
 
- .bodyProjects h1{
+ .bodyProjects h2{
    padding: 10px;
    margin-bottom: 10px;
-   font-size: x-large;
- }
+   font-size: xx-large;
+}
+
+@media (max-width: 400px){
+   .bodyProjects h2{
+      font-size: x-large;
+   }
+}
