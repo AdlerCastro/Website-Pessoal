@@ -1,5 +1,5 @@
 import Image from "next/image"
-import Link from "@/components/atoms/Link"
+import Link from "@/components/atoms/SocialMediaButton"
 import Eu from 'public/images/Eu.jpg'
 import QRCode from 'public/images/QRCodeWhatsapp.jpg'
 import "./styles.css"
