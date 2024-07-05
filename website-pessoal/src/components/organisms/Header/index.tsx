@@ -4,10 +4,10 @@ import { IoMenuOutline } from "react-icons/io5";
 
 // Imports;
 import { scrollTo } from "@/services/utils/scrollTo";
-import NextLink from "next/link";
+import Link from "next/link";
 
 // Components
-import Link from "@/components/atoms/Link"
+import ButtonNav from "./components/ButtonNav"
 
 // Styles
 import "./styles.css"
@@ -24,11 +24,11 @@ const Header = () => {
                 </label>
                 <ul className="menu">
                     <div className="menu-list">
-                        <li><NextLink href="/">Home</NextLink></li>
-                        <li><Link onClick={() => scrollTo("About")}>Sobre</Link></li>
-                        <li><Link onClick={()=> scrollTo("Technologies")}>Tecnologias</Link></li>
-                        <li><Link onClick={() => scrollTo("Projects")}>Projetos</Link></li>
-                        <li><Link onClick={() => scrollTo("Contacts")}>Contatos</Link></li>
+                        <li><Link href="/">Home</Link></li>
+                        <li><ButtonNav onClick={() => scrollTo("About")}>Sobre</ButtonNav></li>
+                        <li><ButtonNav onClick={()=> scrollTo("Technologies")}>Tecnologias</ButtonNav></li>
+                        <li><ButtonNav onClick={() => scrollTo("Projects")}>Projetos</ButtonNav></li>
+                        <li><ButtonNav onClick={() => scrollTo("Contacts")}>Contatos</ButtonNav></li>
                     </div>
                 </ul>
             </nav>
