@@ -6,7 +6,7 @@ import "./styles.css";
 const About = () => {
   return (
     <>
-      <section id={sections.About} className="bodyAbout">
+      <div id={sections.About} className="bodyAbout">
         <div className="about">
           <div className="description">
             <h2>Quem é Adler Castro?</h2>
@@ -29,7 +29,7 @@ const About = () => {
           </div>
         </div>
         <Image src={Eu} alt="Foto de Perfil" className="image" />
-      </section>
+      </div>
     </>
   )
 }

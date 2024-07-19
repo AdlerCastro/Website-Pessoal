@@ -7,12 +7,12 @@ import './style.css'
 const Hero = () => {
 
   return (
-    <section id={sections.Hero} className="hero">
-      <main className="bodyHero">
+    <div id={sections.Hero} className="hero">
+      <div className="bodyHero">
         <h1>Bem vindo</h1>
         <p>Apresentarei algumas informações sobre mim a respeito do lado profissional e pessoal <del>ou não</del></p>
-      </main>
-    </section>
+      </div>
+    </div>
   )
 }
 

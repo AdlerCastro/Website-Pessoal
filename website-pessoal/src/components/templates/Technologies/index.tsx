@@ -6,7 +6,7 @@ import ReactIcon from 'public/icons/ReactIcon.svg'
 
 const Technologies = () => {
   return (
-    <section id={sections.Technologies} className='bodyTechnologies'>
+    <div id={sections.Technologies} className='bodyTechnologies'>
         <h2>Tecnologias utilizadas</h2>
         <div className='technologies'>
           <div className='descriptionTech'>
@@ -24,7 +24,7 @@ const Technologies = () => {
             <Image src={ReactIcon} alt='Ícone Next.js' className='Icons reverse'/>
           </div>
         </div>
-    </section>
+    </div>
   )
 }
 

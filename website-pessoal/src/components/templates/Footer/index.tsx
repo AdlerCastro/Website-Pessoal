@@ -16,7 +16,7 @@ const Footer = () => {
   }
 
   return (
-    <section id={sections.Contacts} className='footer'>
+    <footer id={sections.Contacts} className='footer'>
       <div className='Contatos'>
         <div className='Subscribe'>
           <h1>Acompanhe-me no Github para conhecer mais projetos desenvolvidos</h1>
@@ -29,11 +29,10 @@ const Footer = () => {
           <SocialMediaButton className='SocialMediaButtons' href='https://www.linkedin.com/in/adler-augustus-de-castro-mota/' target='_blank'><Image className='icons' src={LinkedInIcon} alt='LinkedIn' /></SocialMediaButton>
 
           <Link href='/Forms' className='SocialMediaButtons'><Image className='icons' src={EmailIcon} alt='Email' /></Link>
-
         </div>
       </div>
       <p style={style}>Desenvolvido por Adler Castro</p>
-    </section>
+    </footer>
   )
 }
 
