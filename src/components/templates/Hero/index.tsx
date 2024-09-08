@@ -1,7 +1,7 @@
 import { sections } from "@/constants/sections";
 import { BsArrowDown } from "react-icons/bs";
 
-const Hero = () => {
+export default function Hero() {
   return (
     <div
       id={sections.Hero}
@@ -17,9 +17,7 @@ const Hero = () => {
         </p>
       </div>
 
-      <BsArrowDown size={20} className="animate-bounce" />
+      <BsArrowDown size={20} className="animate-bounce mb-1" />
     </div>
   );
-};
-
-export default Hero;
+}
