@@ -4,8 +4,11 @@
 
 @layer base {
   :root {
-      --background-color-default: rgba(0, 0, 0, 0.45);
+      --background-color-default: rgba(0, 0, 0, 0.248);
+      --boder-color-paragraph: rgba(255, 255, 255, 0.35);
       --background-color-About: linear-gradient(180deg, #2083bd, #09203F 50%);
+      --max-width-paragraph: 800px;
+      --max-width-list-items: 550px;
   }
 }
 
