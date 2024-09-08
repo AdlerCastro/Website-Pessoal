@@ -1,7 +1,5 @@
 "use client";
 
-import { IoMenuOutline } from "react-icons/io5";
-
 // Imports;
 import { scrollTo } from "@/services/utils/scrollTo";
 
@@ -11,9 +9,8 @@ import { sections } from "@/constants/sections";
 import ButtonNav from "./components/ButtonNav";
 
 // Styles
-import "./styles.css";
+
 import { useState } from "react";
-import { CgClose } from "react-icons/cg";
 
 export default function Header() {
   const [checked, setChecked] = useState(false);
