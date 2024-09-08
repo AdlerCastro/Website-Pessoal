@@ -29,6 +29,13 @@ const config:Config = {
       fontSize: {
         "2xs": "0.625rem",
       },
+      borderColor: {
+        paragraph: "var(--boder-color-paragraph)",
+      },
+      maxWidth: {
+        paragraph: "var(--max-width-paragraph)",
+        listItems: "var(--max-width-list-items)"
+      },
     },
   },
   plugins: [],
