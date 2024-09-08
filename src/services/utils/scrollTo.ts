@@ -1,7 +1,5 @@
-import { sections } from "@/constants/sections";
-
-export const scrollTo = (id: keyof typeof sections) => {
-    const element = document.getElementById(id)
+export const scrollTo = (section: string) => {
+    const element = document.getElementById(section)
     if (window && element) {
         window.scrollTo({
             top: element?.offsetTop,
