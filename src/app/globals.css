@@ -6,14 +6,16 @@
   :root {
       --background-color-default: rgba(0, 0, 0, 0.248);
       --boder-color-paragraph: rgba(255, 255, 255, 0.35);
+      --max-width-paragraph: 800px;
+      --max-width-list-items: 550px;
+
       --background-color-about: linear-gradient(180deg, #2083bd, #09203F 50%);
       --background-color-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #00ACC1, #00796B, #4CAF50);
-
       --background-size-hero: 400% 400%;
       --animation-bg-hero: gradient 15s ease infinite;;
 
-      --max-width-paragraph: 800px;
-      --max-width-list-items: 550px;
+      --color-border-nav: linear-gradient(to right, transparent, wheat);
+      --animation-border-nav: Animation-Border 2s linear infinite;
   }
 }
 
@@ -28,6 +30,15 @@
 
   100% {
       background-position: 0% 50%;
+  }
+}
+
+@keyframes Animation-Border {
+  0%{
+      transform: translateX(-100%);
+  }
+  100%{
+      transform: translateX(100%);
   }
 }
 
