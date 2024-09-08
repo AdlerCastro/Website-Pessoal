@@ -21,8 +21,16 @@ const config:Config = {
         default: "var(--background-color-default)",
       },
       backgroundImage: {
-        about: "linear-gradient(180deg, #2083bd, #09203F 50%)"
+        about: "var(--background-color-about)",
+        hero: "var(--background-color-hero)"
       },
+      backgroundSize:{
+        sizeHero: "var(--background-size-hero)"
+      },
+      animation: {
+        bgHero: "var(--animation-bg-hero)",
+      },
+
       gridTemplateColumns: {
         dashboard: "300px 1fr",
       },
