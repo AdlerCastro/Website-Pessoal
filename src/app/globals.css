@@ -1,19 +1,12 @@
-:root {
-    --background-color-default: rgba(0, 0, 0, 0.45);
-    --color-default: #ffffff;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-*{
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  color: var(--color-default) ;
-  background: var(--background-color-default) ;
-  font-size: medium;
-  width: 100%;
-  height: 100%;
+@layer base {
+  :root {
+      --background-color-default: rgba(0, 0, 0, 0.45);
+      --background-color-About: linear-gradient(180deg, #2083bd, #09203F 50%);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
