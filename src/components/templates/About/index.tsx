@@ -15,7 +15,7 @@ export default function About() {
             <Image
               src={Eu}
               alt="Foto de Perfil"
-              className="w-[300px] h-[300px] rounded-full transition-all duration-300 ease-in-out p-5 block lg:hidden self-center"
+              className="w-[250px] h-[250px] rounded-full transition-all duration-300 ease-in-out p-5 block lg:hidden self-center"
             />
             <h2 className="text-center sm:text-start text-2xl mb-2">
               Quem é Adler Castro?
@@ -51,7 +51,7 @@ export default function About() {
                   Digitais e soluções gamificadas.
                 </p>
               </div>
-              <div className="relative w-[350px] ml-5 group/profile p-5">
+              <div className="hidden lg:block relative w-[350px] ml-5 group/profile p-5">
                 <div className="w-[300px] h-[300px] group-hover/profile:w-[200px] group-hover/profile:h-[200px] rounded-full absolute inset-0 mx-auto mt-5 transition-all duration-500 ease-in-out hidden lg:block z-[2]">
                   <Image
                     src={Eu}
