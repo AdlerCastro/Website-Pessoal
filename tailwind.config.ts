@@ -22,13 +22,16 @@ const config:Config = {
       },
       backgroundImage: {
         about: "var(--background-color-about)",
-        hero: "var(--background-color-hero)"
+        hero: "var(--background-color-hero)",
+        borderNav: "var(--color-border-nav)",
       },
       backgroundSize:{
         sizeHero: "var(--background-size-hero)"
       },
+
       animation: {
         bgHero: "var(--animation-bg-hero)",
+        animationBorderNav: "var(--animation-border-nav)",
       },
 
       gridTemplateColumns: {
