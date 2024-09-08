@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Footer from "@/components/templates/Footer";
-import  { Poppins } from 'next/font/google'
+import { Poppins } from "next/font/google";
 
 const poppins = Poppins({
-  weight: '400',
-  subsets: ['latin']
-})
+  weight: "400",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Forum: Adler Castro",
@@ -20,10 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.className}>
-      <body>
-        {children}
-        <Footer/>
-      </body>
+      <body className="m-0 p-0 bg-default text-white">{children}</body>
     </html>
   );
 }
