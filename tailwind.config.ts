@@ -21,13 +21,31 @@ const config:Config = {
         default: "var(--background-color-default)",
       },
       backgroundImage: {
-        about: "linear-gradient(180deg, #2083bd, #09203F 50%)"
+        about: "var(--background-color-about)",
+        hero: "var(--background-color-hero)",
+        borderNav: "var(--color-border-nav)",
       },
+      backgroundSize:{
+        sizeHero: "var(--background-size-hero)"
+      },
+
+      animation: {
+        bgHero: "var(--animation-bg-hero)",
+        animationBorderNav: "var(--animation-border-nav)",
+      },
+
       gridTemplateColumns: {
         dashboard: "300px 1fr",
       },
       fontSize: {
         "2xs": "0.625rem",
+      },
+      borderColor: {
+        paragraph: "var(--boder-color-paragraph)",
+      },
+      maxWidth: {
+        paragraph: "var(--max-width-paragraph)",
+        listItems: "var(--max-width-list-items)"
       },
     },
   },
