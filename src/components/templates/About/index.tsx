@@ -1,13 +1,12 @@
-import { sections } from "@/constants/sections";
+import { SECTIONS } from "@/enums/sections.enum";
 import Image from "next/image";
 import Eu from "public/images/Eu.jpg";
-// import "./styles.css";
 
 export default function About() {
   return (
     <>
       <div
-        id={sections.About}
+        id={SECTIONS.About}
         className="w-full flex flex-col items-center justify-center bg-about text-white py-10"
       >
         <div className="flex flex-col gap-3">

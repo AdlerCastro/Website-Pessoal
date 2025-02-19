@@ -1,16 +1,12 @@
-import { sections } from "@/constants/sections"
+import { SECTIONS } from "@/enums/sections.enum"
+import SlideProjects from "./components/SlideProjects"
 import "./styles.css"
 
-import SlideProjects from "./components/SlideProjects"
-
-
-const Projects = () => {
+export default function Projects() {
   return (
-    <div id={sections.Projects} className="bodyProjects">
+    <div id={SECTIONS.Projects} className="bodyProjects">
       <h2>Projetos desenvolvidos</h2>
-      <SlideProjects></SlideProjects>
+      <SlideProjects/>
     </div>
   )
 }
-
-export default Projects

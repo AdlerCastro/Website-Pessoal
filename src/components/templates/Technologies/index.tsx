@@ -1,12 +1,13 @@
-import { sections } from '@/constants/sections'
+
+import { SECTIONS } from '@/enums/sections.enum';
 import './styles.css'
 import Image from 'next/image';
 import NextIcon from 'public/icons/NextjsIcon.svg'
 import ReactIcon from 'public/icons/ReactIcon.svg'
 
-const Technologies = () => {
+export default function Technologies (){
   return (
-    <div id={sections.Technologies} className='bodyTechnologies'>
+    <div id={SECTIONS.Technologies} className='bodyTechnologies'>
         <h2>Tecnologias utilizadas</h2>
         <div className='technologies'>
           <div className='descriptionTech'>
@@ -28,4 +29,3 @@ const Technologies = () => {
   )
 }
 
-export default Technologies
