@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
+import fonts from '@/lib/fonts';
 import './globals.css';
-import { Poppins } from 'next/font/google';
-
-const poppins = Poppins({
-  weight: '400',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   title: 'Adler Castro',
@@ -19,7 +14,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='pt-br' className={`${poppins.className} antialiased`}>
+    <html
+      lang='pt-br'
+      className={`${fonts.poppins.variable} ${fonts.roboto.variable} antialiased`}
+    >
       <body className='bg-default text-white'>{children}</body>
     </html>
   );

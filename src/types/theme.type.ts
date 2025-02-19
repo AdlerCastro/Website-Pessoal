@@ -13,6 +13,10 @@ export type ThemeType = {
     green_300: string;
     gray_100: string;
   };
+  fontFamily: {
+    Poppins: [string, string];
+    Roboto: [string, string];
+  };
   backgroundColor: {
     default: string;
   };
@@ -32,7 +36,7 @@ export type ThemeType = {
     dashboard: string;
   };
   fontSize: {
-    "2xs": string;
+    '2xs': string;
   };
   borderColor: {
     paragraph: string;

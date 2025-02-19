@@ -18,24 +18,16 @@ export default {
       },
     },
     extend: {
+      fontFamily: ligth.fontFamily,
       backgroundColor: ligth.backgroundColor,
-
       backgroundImage: ligth.backgroundImage,
-
       backgroundSize: ligth.backgroundSize,
-
       animation: ligth.animation,
-
       gridTemplateColumns: ligth.gridTemplateColumns,
-
       fontSize: ligth.fontSize,
-
       borderColor: ligth.borderColor,
-
       maxWidth: ligth.maxWidth,
-
       borderRadius: ligth.borderRadius,
-
       boxShadow: {
         header: 'var(--shadow-header)',
       },

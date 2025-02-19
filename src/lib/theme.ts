@@ -1,4 +1,4 @@
-import { ThemeType } from "@/types/theme.type";
+import { ThemeType } from '@/types/theme.type';
 
 export const ligth: ThemeType = {
   colors: {
@@ -15,37 +15,41 @@ export const ligth: ThemeType = {
     green_300: '#025828',
     gray_100: '#383838',
   },
+  fontFamily: {
+    Poppins: ['var(--font-poppins)', 'sans-serif'],
+    Roboto: ['var(--font-roboto)', 'sans-serif'],
+  },
   backgroundColor: {
-    default: "var(--background-color-default)",
+    default: 'var(--background-color-default)',
   },
   backgroundImage: {
-    about: "var(--background-color-about)",
-    hero: "var(--background-color-hero)",
-    borderNav: "var(--color-border-nav)",
+    about: 'var(--background-color-about)',
+    hero: 'var(--background-color-hero)',
+    borderNav: 'var(--color-border-nav)',
   },
   backgroundSize: {
-    sizeHero: "var(--background-size-hero)",
+    sizeHero: 'var(--background-size-hero)',
   },
   animation: {
-    bgHero: "var(--animation-bg-hero)",
-    animationBorderNav: "var(--animation-border-nav)",
+    bgHero: 'var(--animation-bg-hero)',
+    animationBorderNav: 'var(--animation-border-nav)',
   },
   gridTemplateColumns: {
-    dashboard: "300px 1fr",
+    dashboard: '300px 1fr',
   },
   fontSize: {
-    "2xs": "0.625rem",
+    '2xs': '0.625rem',
   },
   borderColor: {
-    paragraph: "var(--boder-color-paragraph)",
+    paragraph: 'var(--boder-color-paragraph)',
   },
   maxWidth: {
-    paragraph: "var(--max-width-paragraph)",
-    listItems: "var(--max-width-list-items)",
+    paragraph: 'var(--max-width-paragraph)',
+    listItems: 'var(--max-width-list-items)',
   },
   borderRadius: {
-    lg: "var(--radius)",
-    md: "calc(var(--radius) - 2px)",
-    sm: "calc(var(--radius) - 4px)",
+    lg: 'var(--radius)',
+    md: 'calc(var(--radius) - 2px)',
+    sm: 'calc(var(--radius) - 4px)',
   },
 };
