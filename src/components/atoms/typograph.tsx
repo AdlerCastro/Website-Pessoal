@@ -7,13 +7,13 @@ const typographVariants = cva('text-white', {
   variants: {
     variant: {
       titleHero:
-        'font-Copperplate text-[2.125rem]/normal font-bold tracking-wider   sm:max-w-[38.75rem] sm:text-[2.625rem]/normal lg:max-w-[57.5rem] lg:text-[3.25rem]/normal',
+        'font-Poppins text-[2.125rem]/normal font-bold tracking-wider sm:max-w-[38.75rem] sm:text-[2.625rem]/normal lg:max-w-[57.5rem] lg:text-[3.25rem]/normal',
       title:
-        'font-Copperplate text-[1.75rem]/8 font-bold tracking-wider md:text-[2rem]/[120%] lg:text-[2.625rem]/[120%]',
+        'font-Poppins text-[1.75rem]/8 font-bold tracking-wider md:text-[2rem]/[120%] lg:text-[2.625rem]/[120%]',
       subtitle:
-        'font-Copperplate text-xl/8 font-bold tracking-wider md:text-xl/[120%] lg:text-xl/[120%]',
+        'font-Poppins text-xl/8 font-bold tracking-wider md:text-xl/[120%] lg:text-xl/[120%]',
       paragraph:
-        'max-w-paragraph rounded-xl border border-solid border-paragraph bg-default p-4 text-start transition-all duration-300 hover:scale-105 font-Roboto text-sm/[150%] h-fit',
+        'max-w-paragraph rounded-xl border border-solid border-paragraph bg-default p-4 text-start transition-all duration-300 hover:scale-105 font-Poppins text-sm/[150%] h-fit',
     },
   },
 });
