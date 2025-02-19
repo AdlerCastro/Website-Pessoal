@@ -1,6 +1,7 @@
 'use client';
 
 import Link from '@/components/atoms/link';
+import { Typograph } from '@/components/atoms/typograph';
 import { SECTIONS } from '@/enums/sections.enum';
 import { cn } from '@/lib/utils';
 import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
@@ -36,13 +37,13 @@ export default function Hero() {
             : '-translate-y-10 opacity-0',
         )}
       >
-        <h1 className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
+        <Typograph.TitleHero className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
           Bem vindo
-        </h1>
-        <p className='px-4 text-center text-base md:px-8'>
+        </Typograph.TitleHero>
+        <Typograph.Paragraph className='border-none bg-transparent p-0'>
           Apresentarei algumas informações sobre mim a respeito do lado
           profissional e pessoal <del>ou não</del>
-        </p>
+        </Typograph.Paragraph>
       </div>
       <Link href={`#${SECTIONS.About}`} className='p-2'>
         <BsArrowDown size={20} className='mb-1 animate-bounce' />
