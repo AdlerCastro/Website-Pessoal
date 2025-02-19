@@ -1,55 +1,45 @@
-import type { Config } from "tailwindcss";
+import { ligth } from './src/lib/theme';
+import type { Config } from 'tailwindcss';
 
-const config:Config = {
-  darkMode: ["class"],
+export default {
+  darkMode: ['class'],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/stories/**/*.stories.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     container: {
       center: true,
-      padding: "2rem",
+      padding: '2rem',
       screens: {
-        "2xl": "1400px",
+        '2xl': '1400px',
       },
     },
     extend: {
-      backgroundColor: {
-        default: "var(--background-color-default)",
-      },
-      backgroundImage: {
-        about: "var(--background-color-about)",
-        hero: "var(--background-color-hero)",
-        borderNav: "var(--color-border-nav)",
-      },
-      backgroundSize:{
-        sizeHero: "var(--background-size-hero)"
-      },
+      backgroundColor: ligth.backgroundColor,
 
-      animation: {
-        bgHero: "var(--animation-bg-hero)",
-        animationBorderNav: "var(--animation-border-nav)",
-      },
+      backgroundImage: ligth.backgroundImage,
 
-      gridTemplateColumns: {
-        dashboard: "300px 1fr",
-      },
-      fontSize: {
-        "2xs": "0.625rem",
-      },
-      borderColor: {
-        paragraph: "var(--boder-color-paragraph)",
-      },
-      maxWidth: {
-        paragraph: "var(--max-width-paragraph)",
-        listItems: "var(--max-width-list-items)"
+      backgroundSize: ligth.backgroundSize,
+
+      animation: ligth.animation,
+
+      gridTemplateColumns: ligth.gridTemplateColumns,
+
+      fontSize: ligth.fontSize,
+
+      borderColor: ligth.borderColor,
+
+      maxWidth: ligth.maxWidth,
+
+      borderRadius: ligth.borderRadius,
+
+      boxShadow: {
+        header: 'var(--shadow-header)',
       },
     },
   },
-  plugins: [],
+  plugins: [require('tailwindcss-animate')],
 } satisfies Config;
-
-export default config;
