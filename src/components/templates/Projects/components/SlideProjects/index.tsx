@@ -3,11 +3,8 @@
 import Image from "next/image"
 import Tormenta from 'public/icons/TormentaIcon.jpeg'
 import Porake from 'public/images/Poraké.jpg'
-import { IoCaretForwardCircle } from "react-icons/io5";
 
 import './styles.css'
-import { useState } from "react";
-// import './script'
 
 const SlideProjects = () => {
 
