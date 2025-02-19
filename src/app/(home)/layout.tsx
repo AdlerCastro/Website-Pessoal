@@ -1,10 +1,12 @@
-import Footer from "@/components/templates/Footer";
+import Header from '@/components/molecules/header';
+import Footer from '@/components/templates/Footer';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-full min-h-screen">
-      <main>{children}</main>
+    <main className='relative min-h-screen w-full'>
+      <Header />
+      {children}
       <Footer />
-    </div>
+    </main>
   );
 }
