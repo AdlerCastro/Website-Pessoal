@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
+    "@next/eslint-plugin-next": "^15.1.7",
     "@storybook/addon-essentials": "^8.1.10",
     "@storybook/addon-interactions": "^8.1.10",
     "@storybook/addon-links": "^8.1.10",
@@ -48,6 +49,7 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8",
     "eslint-config-next": "14.2.4",
+    "eslint-config-prettier": "^10.0.1",
     "eslint-plugin-storybook": "^0.8.0",
     "postcss": "^8.4.45",
     "prettier-plugin-tailwindcss": "^0.6.11",
