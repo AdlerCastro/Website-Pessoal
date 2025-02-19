@@ -1,15 +1,16 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import { Poppins } from "next/font/google";
+import type { Metadata } from 'next';
+import './globals.css';
+import { Poppins } from 'next/font/google';
 
 const poppins = Poppins({
-  weight: "400",
-  subsets: ["latin"],
+  weight: '400',
+  subsets: ['latin'],
 });
 
 export const metadata: Metadata = {
-  title: "Forum: Adler Castro",
-  description: "My personal website",
+  title: 'Adler Castro',
+  description:
+    'Portfólio pessoal de Adler Castro, apresentando projetos e habilidades.',
 };
 
 export default function RootLayout({
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={poppins.className}>
-      <body className="m-0 p-0 bg-default text-white">{children}</body>
+    <html lang='pt-br' className={`${poppins.className} antialiased`}>
+      <body className='bg-default text-white'>{children}</body>
     </html>
   );
 }
