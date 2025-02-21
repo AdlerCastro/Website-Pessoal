@@ -63,7 +63,9 @@ export default function About() {
               )}
             >
               {ABOUT.competences.map((about, index) => (
-                <Typograph.Paragraph key={index}>{about}</Typograph.Paragraph>
+                <Typograph.Paragraph key={index} className='hover:scale-105'>
+                  {about}
+                </Typograph.Paragraph>
               ))}
             </div>
             <div
