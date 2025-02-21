@@ -1,9 +1,8 @@
-interface DivideArrayProps {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  array: any[];
+interface DivideArrayProps<T> {
+  array: T[];
 }
 
-export function useDivideArray({ array }: DivideArrayProps) {
+export function useDivideArray<T>({ array }: DivideArrayProps<T>) {
   if (array.length === 2) {
     return { firstHalf: [array[0]], secondHalf: [array[1]] };
   }
