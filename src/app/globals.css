@@ -12,7 +12,11 @@
       --background-color-about: linear-gradient(180deg, #2083bd, #09203F 50%);
       --background-color-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #00ACC1, #00796B, #4CAF50);
       --background-size-hero: 300% 300%;
-      --animation-bg-hero: gradient 15s ease infinite;;
+      --animation-bg-hero: gradient 15s ease infinite;
+
+      --background-color-projects: rgb(16, 14, 14);
+      --background-color-image-project: linear-gradient(-45deg, #0D47A1, #1976D2, #512DA8, #8E24AA, #E040FB);
+      --animation-bg-image-project: gradient 5s ease infinite;
 
       --color-border-nav: linear-gradient(to right, transparent, wheat);
       --animation-border-nav: Animation-Border 2s linear infinite;

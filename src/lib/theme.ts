@@ -25,6 +25,8 @@ export const ligth: ThemeType = {
   backgroundImage: {
     about: 'var(--background-color-about)',
     hero: 'var(--background-color-hero)',
+    projects: 'var(--background-color-projects)',
+    'image-project': 'var(--background-color-image-project)',
     borderNav: 'var(--color-border-nav)',
   },
   backgroundSize: {
@@ -33,6 +35,7 @@ export const ligth: ThemeType = {
   animation: {
     bgHero: 'var(--animation-bg-hero)',
     animationBorderNav: 'var(--animation-border-nav)',
+    bgImageProject: 'var(--animation-bg-image-project)',
   },
   gridTemplateColumns: {
     dashboard: '300px 1fr',
