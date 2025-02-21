@@ -13,7 +13,7 @@ const typographVariants = cva('text-white', {
       subtitle:
         'font-Poppins text-xl/8 font-bold tracking-wider md:text-xl/[120%] lg:text-xl/[120%]',
       paragraph:
-        'max-w-paragraph rounded-xl border border-solid border-paragraph bg-default p-4 text-start transition-all duration-300 hover:scale-105 font-Poppins text-sm/[150%] h-fit',
+        'max-w-paragraph rounded-xl border border-solid border-paragraph bg-default p-4 text-start transition-all duration-300 font-Poppins text-sm/[150%] h-fit',
     },
   },
 });

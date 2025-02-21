@@ -1,12 +1,18 @@
-import { SECTIONS } from "@/enums/sections.enum"
-import SlideProjects from "./components/SlideProjects"
-import "./styles.css"
+import { SECTIONS } from '@/enums/sections.enum';
+import Container from '@/components/atoms/container';
+import { Typograph } from '@/components/atoms/typograph';
+import CarouselProjects from '@/components/organisms/carousel-projects';
 
 export default function Projects() {
   return (
-    <div id={SECTIONS.Projects} className="bodyProjects">
-      <h2>Projetos desenvolvidos</h2>
-      <SlideProjects/>
+    <div
+      id={SECTIONS.Projects}
+      className='flex w-full items-center justify-center bg-projects'
+    >
+      <Container>
+        <Typograph.Title>Projetos desenvolvidos</Typograph.Title>
+        <CarouselProjects />
+      </Container>
     </div>
-  )
+  );
 }

@@ -23,6 +23,8 @@ export type ThemeType = {
   backgroundImage: {
     about: string;
     hero: string;
+    projects: string;
+    'image-project': string;
     borderNav: string;
   };
   backgroundSize: {
@@ -31,6 +33,7 @@ export type ThemeType = {
   animation: {
     bgHero: string;
     animationBorderNav: string;
+    bgImageProject: string;
   };
   gridTemplateColumns: {
     dashboard: string;
