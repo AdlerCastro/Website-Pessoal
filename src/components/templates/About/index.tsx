@@ -1,5 +1,6 @@
 'use client';
 
+import Container from '@/components/atoms/container';
 import { Typograph } from '@/components/atoms/typograph';
 import { ABOUT } from '@/constants/info/about';
 import { SECTIONS } from '@/enums/sections.enum';
@@ -28,17 +29,14 @@ export default function About() {
   });
 
   return (
-    <div
-      id={SECTIONS.About}
-      className='flex w-full flex-col items-center justify-center bg-about py-10 text-white'
-    >
-      <div className='flex flex-col gap-3'>
+    <div className='flex w-full items-center justify-center bg-about'>
+      <Container id={SECTIONS.About}>
         <div
           ref={(el) => {
             animatedElementsRef.current[0] = el;
           }}
           className={cn(
-            'm-2 flex flex-col gap-4 p-8 transition-all duration-300 ease-in-out',
+            'flex w-full flex-col gap-4 transition-all duration-300 ease-in-out',
             isVisible[0]
               ? 'translate-y-0 opacity-100'
               : '-translate-y-10 opacity-0',
@@ -97,14 +95,14 @@ export default function About() {
             animatedElementsRef.current[3] = el;
           }}
           className={cn(
-            'm-2 flex flex-col gap-4 p-7 transition-all duration-300 ease-in-out',
+            'flex flex-col gap-4 transition-all duration-300 ease-in-out',
             isVisible[3]
               ? 'translate-y-0 opacity-100'
               : '-translate-y-10 opacity-0',
           )}
         >
           <h2 className='mb-2 text-start text-xl'>Principais Competências</h2>
-          <ul className='grid grid-cols-2 gap-4 text-center text-sm'>
+          <div className='grid grid-cols-2 gap-4 text-center text-sm'>
             <div className='flex flex-col gap-4'>
               {firstHalf.map((competence, index) => (
                 <Typograph.Paragraph
@@ -112,7 +110,7 @@ export default function About() {
                   key={index}
                   className='max-w-listItems rounded-md border border-solid border-paragraph p-2 transition-all duration-300 hover:scale-105'
                 >
-                  <li>{competence}</li>
+                  <p>{competence}</p>
                 </Typograph.Paragraph>
               ))}
             </div>
@@ -123,13 +121,13 @@ export default function About() {
                   key={index}
                   className='max-w-listItems rounded-md border border-solid border-paragraph p-2 transition-all duration-300 hover:scale-105'
                 >
-                  <li>{competence}</li>
+                  <p>{competence}</p>
                 </Typograph.Paragraph>
               ))}
             </div>
-          </ul>
+          </div>
         </div>
-      </div>
+      </Container>
     </div>
   );
 }

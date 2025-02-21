@@ -8,7 +8,10 @@ export default function Menu() {
   return (
     <Sheet>
       <div className='relative w-full'>
-        <SheetTrigger className='absolute right-5 top-0'>
+        <SheetTrigger
+          aria-label='Botão de menu'
+          className='absolute right-5 top-0'
+        >
           <MenuIcon size={44} className='w-11' />
         </SheetTrigger>
         <SheetContent

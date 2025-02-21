@@ -40,12 +40,16 @@ export default function Hero() {
         <Typograph.TitleHero className='text-5xl md:text-6xl lg:text-7xl xl:text-8xl'>
           Bem vindo
         </Typograph.TitleHero>
-        <Typograph.Paragraph className='border-none bg-transparent p-0'>
+        <Typograph.Paragraph className='text-balance border-none bg-transparent p-0 text-center'>
           Apresentarei algumas informações sobre mim a respeito do lado
           profissional e pessoal <del>ou não</del>
         </Typograph.Paragraph>
       </div>
-      <Link href={`#${SECTIONS.About}`} className='p-2'>
+      <Link
+        aria-label='Botão para descer a página'
+        href={`#${SECTIONS.About}`}
+        className='p-2'
+      >
         <BsArrowDown size={20} className='mb-1 animate-bounce' />
       </Link>
       <span className='z-20 h-1 w-full animate-animationBorderNav bg-borderNav' />
