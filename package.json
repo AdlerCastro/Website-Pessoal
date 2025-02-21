@@ -14,11 +14,11 @@
   },
   "engines": {
     "node": ">=18.18.0",
-    "pnpm": ">=9.6.0",
+    "pnpm": ">=9.0.0",
     "yarn": "please-use-pnpm",
     "npm": "plase-use-pnpm"
   },
-  "packageManager": "pnpm@9.6.0",
+  "packageManager": "pnpm@9.0.0",
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
     "@radix-ui/react-dialog": "^1.1.6",
