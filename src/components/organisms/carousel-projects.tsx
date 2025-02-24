@@ -17,15 +17,15 @@ export default function CarouselProjects() {
     <Carousel
       orientation='horizontal'
       className='h-fit w-full'
-      plugins={[Autoplay({ delay: 5000 })]}
+      plugins={[Autoplay({ delay: 6000 })]}
     >
-      <CarouselContent className='mb-28 flex w-full items-start'>
+      <CarouselContent className='mb-20 flex w-full items-start'>
         {PROJECTS.map((project, index) => (
           <CarouselItem
             key={index}
             className='flex w-full items-start justify-center'
           >
-            <div className='flex max-h-[40rem] w-fit flex-col items-center justify-start gap-5 overflow-auto rounded-xl bg-zinc-800/60 px-8 py-10'>
+            <div className='flex max-h-[32rem] w-fit flex-col items-center justify-start gap-5 overflow-auto rounded-xl bg-zinc-800/60 px-8 py-10'>
               <div className='flex w-40 animate-bgImageProject items-center justify-center rounded-full bg-image-project bg-sizeHero p-[0.125rem] transition-all'>
                 <Image
                   src={project.image}
@@ -45,7 +45,7 @@ export default function CarouselProjects() {
                   {project.description.map((description, index) => (
                     <Typograph.Paragraph
                       key={index}
-                      className='text-balance border-none bg-transparent py-0'
+                      className='max-w-[30rem] border-none bg-transparent py-0 text-start'
                     >
                       {description}
                     </Typograph.Paragraph>

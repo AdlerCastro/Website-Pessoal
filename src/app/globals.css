@@ -4,25 +4,34 @@
 
 @layer base {
   :root {
+    /* Header */
+    --color-border-nav: linear-gradient(to right, transparent, wheat);
+    --animation-border-nav: Animation-Border 2s linear infinite;
+    --radius: 0.5rem;
+    --shadow-header: 0px 23px 6px 0px rgba(0, 0, 0, 0.00), 0px 14px 6px 0px rgba(0, 0, 0, 0.01), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+
       --background-color-default: rgba(0, 0, 0, 0.248);
+
+      /* Paragraphs */
       --boder-color-paragraph: rgba(255, 255, 255, 0.35);
       --max-width-paragraph: 800px;
       --max-width-list-items: 550px;
 
+      /* Section About */
       --background-color-about: linear-gradient(180deg, #2083bd, #09203F 50%);
       --background-color-hero: linear-gradient(-45deg, #0D47A1, #1976D2, #00ACC1, #00796B, #4CAF50);
       --background-size-hero: 300% 300%;
       --animation-bg-hero: gradient 15s ease infinite;
 
+      /* Section Projects */
       --background-color-projects: rgb(16, 14, 14);
       --background-color-image-project: linear-gradient(-45deg, #0D47A1, #1976D2, #512DA8, #8E24AA, #E040FB);
       --animation-bg-image-project: gradient 5s ease infinite;
 
-      --color-border-nav: linear-gradient(to right, transparent, wheat);
-      --animation-border-nav: Animation-Border 2s linear infinite;
-      --radius: 0.5rem;
-
-      --shadow-header: 0px 23px 6px 0px rgba(0, 0, 0, 0.00), 0px 14px 6px 0px rgba(0, 0, 0, 0.01), 0px 8px 5px 0px rgba(0, 0, 0, 0.05), 0px 4px 4px 0px rgba(0, 0, 0, 0.09), 0px 1px 2px 0px rgba(0, 0, 0, 0.10);
+      /* Section Technologies */
+      --background-color-tech: linear-gradient(#09203f, rgb(16, 14, 14) 80%);
+      
+      
   }
 }
 

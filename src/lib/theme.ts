@@ -28,6 +28,7 @@ export const ligth: ThemeType = {
     projects: 'var(--background-color-projects)',
     'image-project': 'var(--background-color-image-project)',
     borderNav: 'var(--color-border-nav)',
+    technologies: 'var(--background-color-tech)',
   },
   backgroundSize: {
     sizeHero: 'var(--background-size-hero)',
