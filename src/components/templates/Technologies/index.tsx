@@ -10,7 +10,7 @@ export default function Technologies() {
   return (
     <div
       id={SECTIONS.Technologies}
-      className='bg-technologies flex w-full items-center justify-center'
+      className='flex w-full items-center justify-center bg-technologies'
     >
       <Container>
         <Typograph.Title>Principais Tecnologias utilizadas</Typograph.Title>
