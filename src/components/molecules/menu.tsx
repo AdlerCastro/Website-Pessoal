@@ -10,7 +10,7 @@ export default function Menu() {
       <div className='relative w-full'>
         <SheetTrigger
           aria-label='Botão de menu'
-          className='absolute right-5 top-0'
+          className='absolute right-5 top-0 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-white'
         >
           <MenuIcon size={44} className='w-11' />
         </SheetTrigger>
