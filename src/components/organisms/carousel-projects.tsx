@@ -11,15 +11,40 @@ import {
 import Image from 'next/image';
 import { Typograph } from '../atoms/typograph';
 import Autoplay from 'embla-carousel-autoplay';
+import { useRef, useState } from 'react';
+import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
+import { cn } from '@/lib/utils';
 
 export default function CarouselProjects() {
+  const [isVisible, setIsVisible] = useState<boolean[]>(Array(1).fill(false));
+
+  const animatedElementsRef = useRef<(AnimatedElementsTypes | null)[]>(
+    Array(1).fill(null),
+  );
+
+  HandleObserver({
+    setIsVisible,
+    isVisible,
+    animatedElementsRef,
+  });
+
   return (
     <Carousel
       orientation='horizontal'
       className='h-fit w-full'
       plugins={[Autoplay({ delay: 6000 })]}
     >
-      <CarouselContent className='mb-20 flex w-full items-start'>
+      <CarouselContent
+        ref={(ref) => {
+          animatedElementsRef.current[0] = ref;
+        }}
+        className={cn(
+          'mb-20 flex w-full items-start transition-all duration-300 ease-in-out',
+          isVisible[0]
+            ? 'translate-y-0 opacity-100'
+            : '-translate-y-10 opacity-0',
+        )}
+      >
         {PROJECTS.map((project, index) => (
           <CarouselItem
             key={index}
