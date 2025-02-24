@@ -65,7 +65,7 @@ export default function About() {
                   : '-translate-y-10 opacity-0',
               )}
             >
-              {ABOUT.competences.map((about, index) => (
+              {ABOUT.content.map((about, index) => (
                 <Typograph.Paragraph key={index} className='hover:scale-105'>
                   {about}
                 </Typograph.Paragraph>
