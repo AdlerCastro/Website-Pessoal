@@ -29,8 +29,11 @@ export default function About() {
   });
 
   return (
-    <div className='flex w-full items-center justify-center bg-about'>
-      <Container id={SECTIONS.About}>
+    <div
+      id={SECTIONS.About}
+      className='flex w-full items-center justify-center bg-about'
+    >
+      <Container>
         <div
           ref={(el) => {
             animatedElementsRef.current[0] = el;
