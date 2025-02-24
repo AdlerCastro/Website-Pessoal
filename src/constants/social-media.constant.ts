@@ -13,5 +13,5 @@ export const SOCIAL_MEDIA = [
     alt: 'LinkedIn',
     link: 'https://www.linkedin.com/in/adler-augustus-de-castro-mota/',
   },
-  { image: EmailIcon, alt: 'Gmail', link: 'mailto:adlercastro@gmail.com' },
+  { image: EmailIcon, alt: 'Gmail', link: 'mailto:adlercastro01@gmail.com' },
 ];

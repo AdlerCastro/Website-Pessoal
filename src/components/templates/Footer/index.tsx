@@ -64,8 +64,9 @@ export default function Footer() {
             <div className='flex items-center justify-center gap-4'>
               {SOCIAL_MEDIA.map((media, index) => (
                 <Link
-                  href={media.link}
                   key={index}
+                  href={media.link}
+                  target='_blank'
                   className='rounded-full p-2 transition-all duration-100 hover:scale-125 focus-visible:scale-125 focus-visible:outline focus-visible:outline-1 focus-visible:outline-white'
                 >
                   <Image
