@@ -11,7 +11,7 @@ export default function Container({
   return (
     <div
       className={cn(
-        'flex w-full max-w-[1125px] flex-col items-center justify-center gap-10 px-[30px] py-10 text-white md:gap-10 lg:mt-14 lg:px-16 lg:py-14',
+        'flex w-full max-w-[1125px] flex-col items-center justify-center gap-10 px-[30px] py-10 text-white lg:mt-14 lg:px-16 lg:py-14',
         className,
       )}
       {...props}

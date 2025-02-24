@@ -9,10 +9,10 @@ export const ABOUT = {
     'Conhecimento aplicado em desenvolvimento fullstack.',
     'Conhecimento aplicado de Microsoft 365: Excel, Word, PowerPoint.',
     'Conhecimento aplicado em modelagem no SolidWorks e AutoCad.',
-    'Conhecimento aplicado em eletrônica e sistemas embarcados.',
+    'Inglês técnico.',
     'Certificado em ReactJS pela Rocketseat.',
     'Certificado em NextJS pela Rocketseat.',
     'Metodologia ágil (Scrum, Kanban).',
-    'Inglês técnico.',
+    'Conhecimento aplicado em eletrônica e sistemas embarcados.',
   ],
 };

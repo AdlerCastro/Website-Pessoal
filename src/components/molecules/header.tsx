@@ -52,7 +52,7 @@ export default function Header() {
           'absolute hidden w-fit items-center justify-center gap-12 rounded-full bg-black/90 px-9 py-5 transition-all duration-500 ease-in-out lg:flex',
           triggered ? 'shadow-header' : 'bg-transparent',
           isVisible[1]
-            ? 'shadow-header translate-y-0 opacity-100 lg:flex'
+            ? 'translate-y-0 opacity-100 shadow-header lg:flex'
             : '-translate-y-10 opacity-0',
         )}
       >
