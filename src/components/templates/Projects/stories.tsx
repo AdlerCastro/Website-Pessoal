@@ -1,11 +1,11 @@
-import { Meta, StoryObj } from "@storybook/react"
-import Projects from "."
+import { Meta, StoryObj } from '@storybook/react';
+import Projects from '.';
 
-export default{
-    title: "Components/Templates/Projects",
-    component: Projects
-}as Meta<StoryObj>
+export default {
+  title: 'Components/Templates/Projects',
+  component: Projects,
+} as Meta<StoryObj>;
 
 type Story = StoryObj;
 
-export const Default:Story = {}
+export const Default: Story = {};

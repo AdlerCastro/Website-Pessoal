@@ -27,6 +27,7 @@ export type ThemeType = {
     projects: string;
     'image-project': string;
     technologies: string;
+    contact: string;
   };
   backgroundSize: {
     sizeHero: string;

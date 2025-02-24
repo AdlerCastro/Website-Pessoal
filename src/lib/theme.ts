@@ -1,6 +1,6 @@
 import { ThemeType } from '@/types/theme.type';
 
-export const ligth: ThemeType = {
+export const light: ThemeType = {
   colors: {
     white_100: '#F4EFEF',
     red_wf: '#680101',
@@ -29,6 +29,7 @@ export const ligth: ThemeType = {
     'image-project': 'var(--background-color-image-project)',
     borderNav: 'var(--color-border-nav)',
     technologies: 'var(--background-color-tech)',
+    contact: 'var(--background-color-contact)',
   },
   backgroundSize: {
     sizeHero: 'var(--background-size-hero)',
