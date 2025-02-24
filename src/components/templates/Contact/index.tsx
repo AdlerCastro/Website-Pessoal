@@ -23,22 +23,26 @@ export default function Contact() {
   return (
     <div
       id={SECTIONS.Contacts}
-      ref={(el) => {
-        animatedElementsRef.current[0] = el;
-      }}
-      className={cn(
-        'flex w-full items-center justify-center bg-contact transition-all duration-300 ease-in-out',
-        isVisible[0]
-          ? 'translate-y-0 opacity-100'
-          : '-translate-y-10 opacity-0',
-      )}
+      className='flex w-full items-center justify-center bg-contact transition-all duration-300 ease-in-out'
     >
-      <Container>
-        <Typograph.Title>Entre em Contato</Typograph.Title>
-        <Typograph.Paragraph>
-          Pronto para trocar ideias ou iniciar um projeto? Fique à vontade para
-          entrar em contato!
-        </Typograph.Paragraph>
+      <Container className='mb-20'>
+        <div
+          className={cn(
+            'flex flex-col items-center justify-center gap-10 transition-all duration-300 ease-in-out',
+            isVisible[0]
+              ? 'translate-y-0 opacity-100'
+              : '-translate-y-10 opacity-0',
+          )}
+          ref={(el) => {
+            animatedElementsRef.current[0] = el;
+          }}
+        >
+          <Typograph.Title>Entre em Contato</Typograph.Title>
+          <Typograph.Paragraph>
+            Pronto para trocar ideias ou iniciar um projeto? Fique à vontade
+            para entrar em contato!
+          </Typograph.Paragraph>
+        </div>
         <FormContact />
       </Container>
     </div>
