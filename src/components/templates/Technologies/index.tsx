@@ -1,44 +1,43 @@
 import { SECTIONS } from '@/enums/sections.enum';
-import './styles.css';
 import Image from 'next/image';
-import NextIcon from 'public/icons/NextjsIcon.svg';
-import ReactIcon from 'public/icons/ReactIcon.svg';
+
+import Container from '@/components/atoms/container';
+import { Typograph } from '@/components/atoms/typograph';
+import { TECHNOLOGIES } from '@/constants/info/technologies';
+import { cn } from '@/lib/utils';
 
 export default function Technologies() {
   return (
-    <div id={SECTIONS.Technologies} className='bodyTechnologies'>
-      <h2>Tecnologias utilizadas</h2>
-      <div className='technologies'>
-        <div className='descriptionTech'>
-          <div className='text'>
-            <h3>Next.js</h3>
-            <p>
-              Next.js é um framework baseado em React que adiciona
-              funcionalidades avançadas, como renderização do lado do servidor
-              &#40;SSR&#41; e geração de sites estáticos &#40;SSG&#41;,
-              proporcionando uma melhor performance e SEO aprimorado para as
-              aplicações.
-            </p>
+    <div
+      id={SECTIONS.Technologies}
+      className='bg-technologies flex w-full items-center justify-center'
+    >
+      <Container>
+        <Typograph.Title>Principais Tecnologias utilizadas</Typograph.Title>
+        {TECHNOLOGIES.map((tech, index) => (
+          <div
+            key={index}
+            className='flex flex-col items-center justify-center gap-4 md:flex-row'
+          >
+            <Image
+              src={tech.image}
+              alt={tech.title}
+              width={200}
+              height={200}
+              className={cn(
+                'h-24 w-24 flex-1 md:h-32 md:w-32',
+                index % 2 === 0 && 'md:order-1',
+              )}
+            />
+            <div className='flex flex-col justify-center'>
+              <Typograph.Subtitle>{tech.title}</Typograph.Subtitle>
+              <Typograph.Paragraph className='w-fit text-balance border-none bg-transparent'>
+                {tech.description}
+              </Typograph.Paragraph>
+            </div>
           </div>
-          <Image src={NextIcon} alt='Ícone Next.js' className='Icons' />
-        </div>
-        <div className='descriptionTech'>
-          <div className='text'>
-            <h3>React</h3>
-            <p>
-              Para o frontend, uso principalmente o framework e React.js. O
-              React.js é uma biblioteca JavaScript popular para construir
-              interfaces de usuário, permitindo a criação de componentes
-              reutilizáveis e a construção de interfaces de forma declarativa.
-            </p>
-          </div>
-          <Image
-            src={ReactIcon}
-            alt='Ícone Next.js'
-            className='Icons reverse'
-          />
-        </div>
-      </div>
+        ))}
+      </Container>
     </div>
   );
 }
