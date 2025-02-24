@@ -12,13 +12,11 @@ import {
 } from '../ui/form';
 import Input from '../ui/input';
 import { ContactAction } from '@/actions/send-email/route';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '../ui/button';
 import { toast } from 'sonner';
 import { Textarea } from '../ui/textarea';
 import { useMask } from '@/hooks/use-mask';
-import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
-import { cn } from '@/lib/utils';
 
 interface FormInteractsStorybook {
   isLoading?: boolean;
@@ -43,18 +41,6 @@ export default function FormContact({
   useEffect(() => {
     setIsLoading(handleSelect);
   }, [handleSelect]);
-
-  const [isVisible, setIsVisible] = useState<boolean[]>(Array(1).fill(false));
-
-  const animatedElementsRef = useRef<(AnimatedElementsTypes | null)[]>(
-    Array(1).fill(null),
-  );
-
-  HandleObserver({
-    setIsVisible,
-    isVisible,
-    animatedElementsRef,
-  });
 
   async function onSubmit(values: FormSchemaType) {
     try {
@@ -87,16 +73,8 @@ export default function FormContact({
   return (
     <Form {...form}>
       <form
-        ref={(el) => {
-          animatedElementsRef.current[0] = el;
-        }}
         onSubmit={form.handleSubmit(onSubmit)}
-        className={cn(
-          'flex w-fit flex-col items-center gap-6 rounded-lg border border-white/20 bg-white/5 p-6 transition-all duration-300 ease-in-out',
-          isVisible[0]
-            ? 'translate-y-0 opacity-100'
-            : '-translate-y-10 opacity-0',
-        )}
+        className='flex w-fit flex-col items-center gap-6 rounded-lg border border-white/20 bg-white/5 p-6 transition-all duration-300 ease-in-out'
       >
         <FormField
           control={form.control}
