@@ -1,4 +1,4 @@
-import { ligth } from './src/lib/theme';
+import { light } from './src/lib/theme';
 import type { Config } from 'tailwindcss';
 
 export default {
@@ -18,16 +18,16 @@ export default {
       },
     },
     extend: {
-      fontFamily: ligth.fontFamily,
-      backgroundColor: ligth.backgroundColor,
-      backgroundImage: ligth.backgroundImage,
-      backgroundSize: ligth.backgroundSize,
-      animation: ligth.animation,
-      gridTemplateColumns: ligth.gridTemplateColumns,
-      fontSize: ligth.fontSize,
-      borderColor: ligth.borderColor,
-      maxWidth: ligth.maxWidth,
-      borderRadius: ligth.borderRadius,
+      fontFamily: light.fontFamily,
+      backgroundColor: light.backgroundColor,
+      backgroundImage: light.backgroundImage,
+      backgroundSize: light.backgroundSize,
+      animation: light.animation,
+      gridTemplateColumns: light.gridTemplateColumns,
+      fontSize: light.fontSize,
+      borderColor: light.borderColor,
+      maxWidth: light.maxWidth,
+      borderRadius: light.borderRadius,
       boxShadow: {
         header: 'var(--shadow-header)',
       },
