@@ -1,7 +1,6 @@
 import { light } from '@/lib/theme';
 import {
   Container,
-  Img,
   Section,
   Tailwind,
   Text,

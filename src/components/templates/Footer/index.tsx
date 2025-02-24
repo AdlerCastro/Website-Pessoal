@@ -1,6 +1,5 @@
 import Image from 'next/image';
 import Link from '@/components/atoms/link';
-import { SECTIONS } from '@/enums/sections.enum';
 import Container from '@/components/atoms/container';
 import { Typograph } from '@/components/atoms/typograph';
 import { SOCIAL_MEDIA } from '@/constants/social-media.constant';
