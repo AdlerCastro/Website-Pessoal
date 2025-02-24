@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import fonts from '@/lib/fonts';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
@@ -23,6 +24,7 @@ export default function RootLayout({
         {children}
         <Toaster />
       </body>
+      <SpeedInsights />
     </html>
   );
 }
