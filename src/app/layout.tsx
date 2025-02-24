@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import fonts from '@/lib/fonts';
 import './globals.css';
+import { Toaster } from '@/components/ui/sonner';
 
 export const metadata: Metadata = {
   title: 'Adler Castro',
@@ -18,7 +19,10 @@ export default function RootLayout({
       lang='pt-br'
       className={`${fonts.poppins.variable} ${fonts.roboto.variable} antialiased`}
     >
-      <body className='bg-default text-white'>{children}</body>
+      <body className='bg-default text-white'>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
