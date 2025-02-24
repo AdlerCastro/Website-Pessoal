@@ -21,11 +21,12 @@ export type ThemeType = {
     default: string;
   };
   backgroundImage: {
+    borderNav: string;
     about: string;
     hero: string;
     projects: string;
     'image-project': string;
-    borderNav: string;
+    technologies: string;
   };
   backgroundSize: {
     sizeHero: string;
