@@ -23,8 +23,8 @@ export default function RootLayout({
       <body className='bg-default text-white'>
         {children}
         <Toaster />
+        <SpeedInsights />
       </body>
-      <SpeedInsights />
     </html>
   );
 }
