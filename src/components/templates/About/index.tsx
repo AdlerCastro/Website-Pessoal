@@ -8,7 +8,6 @@ import { SECTIONS } from '@/enums/sections.enum';
 import { useDivideArray } from '@/hooks/use-divide-array.hook';
 import { cn } from '@/lib/utils';
 import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
-import Image from 'next/image';
 import Eu from 'public/images/Eu.jpg';
 import { useRef, useState } from 'react';
 
