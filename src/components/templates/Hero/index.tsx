@@ -24,7 +24,7 @@ export default function Hero() {
   return (
     <div
       id={SECTIONS.Home}
-      className='flex h-screen w-full animate-bgHero flex-col items-center justify-center overflow-hidden bg-hero bg-sizeHero transition-all'
+      className='flex h-[100svh] w-full animate-bgHero flex-col items-center justify-center overflow-hidden bg-hero bg-sizeHero transition-all'
     >
       <div
         ref={(el) => {
