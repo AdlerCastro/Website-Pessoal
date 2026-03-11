@@ -1,11 +1,11 @@
 'use client';
 
+import { useCallback, useEffect, useState } from 'react';
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
+  type CarouselApi,
 } from '../ui/carousel';
 import { Typograph } from '../atoms/typograph';
 import Autoplay from 'embla-carousel-autoplay';
@@ -27,22 +27,45 @@ const getStatusColor = (status: string) => {
 };
 
 export default function CarouselProjects() {
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+    },
+    [api],
+  );
+
   return (
     <Carousel
+      setApi={setApi}
       orientation='horizontal'
       className='w-full'
       plugins={[Autoplay({ delay: 5000 })]}
     >
-      <CarouselContent className={cn('mb-20 flex w-full items-start')}>
+      <CarouselContent className={cn('mb-8 flex w-full items-start')}>
         {PROJECTS.map((project, index) => (
           <CarouselItem
             key={index}
             className='flex w-full items-start justify-center'
           >
-            <div className='border-primary-500/20 flex max-h-[40rem] w-full max-w-2xl flex-col items-center justify-start gap-5 overflow-auto rounded-xl border bg-zinc-800/60 px-8 py-10'>
+            <div className='flex max-h-[40rem] w-full max-w-2xl flex-col items-center justify-start gap-5 overflow-auto rounded-xl border border-primary-500/20 bg-zinc-800/60 px-8 py-10'>
               {/* Header com badges */}
               <div className='flex w-full flex-wrap items-center justify-center gap-2'>
-                <span className='bg-primary-500/20 text-primary-300 rounded-full px-3 py-1 text-xs font-medium'>
+                <span className='rounded-full bg-primary-500/20 px-3 py-1 text-xs font-medium text-primary-300'>
                   {project.category}
                 </span>
                 <span
@@ -86,7 +109,7 @@ export default function CarouselProjects() {
                         key={idx}
                         className='flex items-start gap-2 text-sm text-gray-300'
                       >
-                        <span className='text-primary-400 mt-1'>✓</span>
+                        <span className='mt-1 text-primary-400'>✓</span>
                         {highlight}
                       </li>
                     ))}
@@ -98,7 +121,7 @@ export default function CarouselProjects() {
                   {project.stack.map((tech, idx) => (
                     <span
                       key={idx}
-                      className='bg-primary-500/20 text-primary-300 rounded-full px-3 py-1 text-xs font-medium'
+                      className='rounded-full bg-primary-500/20 px-3 py-1 text-xs font-medium text-primary-300'
                     >
                       {tech}
                     </span>
@@ -112,7 +135,7 @@ export default function CarouselProjects() {
                       href={project.github}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='border-primary-500 text-primary-400 hover:bg-primary-500/10 flex items-center gap-2 rounded-lg border px-4 py-2 text-sm font-medium transition-colors'
+                      className='flex items-center gap-2 rounded-lg border border-primary-500 px-4 py-2 text-sm font-medium text-primary-400 transition-colors hover:bg-primary-500/10'
                     >
                       <Github size={16} />
                       GitHub
@@ -123,7 +146,7 @@ export default function CarouselProjects() {
                       href={project.live}
                       target='_blank'
                       rel='noopener noreferrer'
-                      className='bg-primary-600 hover:bg-primary-700 flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-medium text-white transition-colors'
+                      className='flex items-center gap-2 rounded-lg bg-primary-600 px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-primary-700'
                     >
                       <ExternalLink size={16} />
                       Ver ao vivo
@@ -135,8 +158,23 @@ export default function CarouselProjects() {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious className='bg-white/60 text-black hover:bg-white/80 active:bg-white' />
-      <CarouselNext className='bg-white/60 text-black hover:bg-white/80 active:bg-white' />
+
+      {/* Dot Navigation */}
+      <div className='flex items-center justify-center gap-2'>
+        {Array.from({ length: count }).map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollTo(index)}
+            className={cn(
+              'h-2.5 w-2.5 rounded-full transition-all duration-300',
+              current === index
+                ? 'w-8 bg-primary-500'
+                : 'bg-gray-500 hover:bg-gray-400',
+            )}
+            aria-label={`Ir para projeto ${index + 1}`}
+          />
+        ))}
+      </div>
     </Carousel>
   );
 }

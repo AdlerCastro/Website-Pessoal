@@ -7,10 +7,20 @@ import { SERVICES } from '@/constants/info/services';
 import { SECTIONS } from '@/enums/sections.enum';
 import { cn } from '@/lib/utils';
 import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
-import { useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel';
+import Autoplay from 'embla-carousel-autoplay';
+import { type CarouselApi } from '@/components/ui/carousel';
 
 export default function Services() {
   const [isVisible, setIsVisible] = useState<boolean[]>(Array(2).fill(false));
+  const [api, setApi] = useState<CarouselApi>();
+  const [current, setCurrent] = useState(0);
+  const [count, setCount] = useState(0);
 
   const animatedElementsRef = useRef<(AnimatedElementsTypes | null)[]>(
     Array(2).fill(null),
@@ -21,6 +31,24 @@ export default function Services() {
     isVisible,
     animatedElementsRef,
   });
+
+  useEffect(() => {
+    if (!api) return;
+
+    setCount(api.scrollSnapList().length);
+    setCurrent(api.selectedScrollSnap());
+
+    api.on('select', () => {
+      setCurrent(api.selectedScrollSnap());
+    });
+  }, [api]);
+
+  const scrollTo = useCallback(
+    (index: number) => {
+      api?.scrollTo(index);
+    },
+    [api],
+  );
 
   return (
     <div
@@ -36,7 +64,7 @@ export default function Services() {
             'mb-12 flex flex-col items-center gap-4 text-center transition-all duration-300 ease-in-out',
             isVisible[0]
               ? 'translate-y-0 opacity-100'
-              : '-translate-y-10 opacity-0',
+              : 'translate-y-0 opacity-100 md:-translate-y-10 md:opacity-0',
           )}
         >
           <Typograph.Title>Serviços Freelancer</Typograph.Title>
@@ -46,12 +74,13 @@ export default function Services() {
           </p>
         </div>
 
+        {/* Grid para telas lg+ (>=1024px) */}
         <div
           ref={(el) => {
             animatedElementsRef.current[1] = el;
           }}
           className={cn(
-            'grid gap-6 transition-all duration-300 ease-in-out sm:grid-cols-2 lg:grid-cols-4',
+            'hidden gap-6 transition-all duration-300 ease-in-out lg:grid lg:grid-cols-4',
             isVisible[1]
               ? 'translate-y-0 opacity-100'
               : '-translate-y-10 opacity-0',
@@ -60,6 +89,52 @@ export default function Services() {
           {SERVICES.map((service, index) => (
             <ServiceCard key={service.id} service={service} index={index} />
           ))}
+        </div>
+
+        {/* Carrossel para telas <1024px */}
+        <div className='w-full lg:hidden'>
+          <Carousel
+            setApi={setApi}
+            opts={{
+              align: 'start',
+              loop: true,
+            }}
+            plugins={[
+              Autoplay({
+                delay: 4000,
+                stopOnInteraction: true,
+              }),
+            ]}
+            className='w-full'
+          >
+            <CarouselContent className='-ml-2 md:-ml-4'>
+              {SERVICES.map((service, index) => (
+                <CarouselItem
+                  key={service.id}
+                  className='pl-2 md:basis-1/2 md:pl-4'
+                >
+                  <ServiceCard service={service} index={index} />
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
+
+          {/* Dot buttons */}
+          <div className='mt-6 flex justify-center gap-2'>
+            {Array.from({ length: count }).map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollTo(index)}
+                className={cn(
+                  'h-2.5 w-2.5 rounded-full transition-all duration-300',
+                  current === index
+                    ? 'bg-primary-500 w-6'
+                    : 'bg-gray-500 hover:bg-gray-400',
+                )}
+                aria-label={`Ir para slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
         {/* WhatsApp CTA */}

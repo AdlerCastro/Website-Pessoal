@@ -36,7 +36,7 @@ export default function Experience() {
             'mb-12 flex flex-col items-center gap-4 text-center transition-all duration-300 ease-in-out',
             isVisible[0]
               ? 'translate-y-0 opacity-100'
-              : '-translate-y-10 opacity-0',
+              : 'translate-y-0 opacity-100 md:-translate-y-10 md:opacity-0',
           )}
         >
           <Typograph.Title>Experiência Profissional</Typograph.Title>
@@ -53,7 +53,7 @@ export default function Experience() {
             'relative transition-all duration-300 ease-in-out',
             isVisible[1]
               ? 'translate-y-0 opacity-100'
-              : '-translate-y-10 opacity-0',
+              : 'translate-y-0 opacity-100 md:-translate-y-10 md:opacity-0',
           )}
         >
           {/* Linha vertical da timeline */}
