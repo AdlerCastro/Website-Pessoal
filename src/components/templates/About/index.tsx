@@ -47,10 +47,12 @@ export default function About() {
               transition={{ delay: index * 0.1 }}
               className='flex flex-col items-center rounded-lg bg-white/5 p-4 text-center backdrop-blur-sm'
             >
-              <span className='text-primary-400 text-3xl font-bold md:text-4xl'>
+              <span className='text-3xl font-bold text-primary-400 md:text-4xl'>
                 {stat.value}
               </span>
-              <span className='text-sm text-gray-400'>{stat.label}</span>
+              <span className='text-balance text-sm text-gray-400'>
+                {stat.label}
+              </span>
             </motion.div>
           ))}
         </div>
@@ -127,7 +129,7 @@ export default function About() {
             {ABOUT.competences.map((competence, index) => (
               <span
                 key={index}
-                className='border-primary-500/30 bg-primary-500/10 hover:border-primary-500 rounded-lg border px-4 py-2 text-sm text-white transition-all duration-300 hover:scale-105'
+                className='rounded-lg border border-primary-500/30 bg-primary-500/10 px-4 py-2 text-sm text-white transition-all duration-300 hover:scale-105 hover:border-primary-500'
               >
                 {competence}
               </span>

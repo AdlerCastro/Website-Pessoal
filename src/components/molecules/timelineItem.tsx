@@ -24,13 +24,13 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ delay: index * 0.2 }}
       viewport={{ once: true }}
-      className='relative pl-8 md:pl-16'
+      className='relative md:pl-16'
     >
       {/* Dot na timeline */}
-      <div className='border-primary-500 absolute left-0 top-2 hidden h-4 w-4 rounded-full border-4 bg-gray-900 md:left-6 md:block' />
+      <div className='absolute left-0 top-2 hidden h-4 w-4 rounded-full border-4 border-primary-500 bg-gray-900 md:left-6 md:block' />
 
       {/* Card */}
-      <div className='border-primary-500/20 hover:border-primary-500/50 rounded-xl border bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:bg-white/10'>
+      <div className='rounded-xl border border-primary-500/20 bg-white/5 p-6 backdrop-blur-sm transition-all duration-300 hover:border-primary-500/50 hover:bg-white/10'>
         {/* Header */}
         <div className='mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between'>
           <div>
@@ -55,7 +55,7 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
               key={idx}
               className='flex items-start gap-2 text-sm text-gray-300'
             >
-              <span className='bg-primary-500 mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full' />
+              <span className='mt-1 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-primary-500' />
               {highlight}
             </li>
           ))}
@@ -66,7 +66,7 @@ export default function TimelineItem({ experience, index }: TimelineItemProps) {
           {experience.stack.map((tech, idx) => (
             <span
               key={idx}
-              className='bg-primary-500/20 text-primary-300 rounded-full px-3 py-1 text-xs font-medium'
+              className='rounded-full bg-primary-500/20 px-3 py-1 text-xs font-medium text-primary-300'
             >
               {tech}
             </span>

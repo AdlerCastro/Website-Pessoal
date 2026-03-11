@@ -25,7 +25,7 @@ export default function Experience() {
   return (
     <div
       id={SECTIONS.Experience}
-      className='bg-experience flex w-full justify-center'
+      className='flex w-full justify-center bg-experience'
     >
       <Container>
         <div
@@ -57,7 +57,7 @@ export default function Experience() {
           )}
         >
           {/* Linha vertical da timeline */}
-          <div className='bg-primary-500/30 absolute bottom-0 left-8 top-0 hidden w-px md:block' />
+          <div className='absolute bottom-0 left-8 top-0 hidden w-px bg-primary-500/30 md:block' />
 
           <div className='space-y-8'>
             {EXPERIENCES.map((exp, index) => (
