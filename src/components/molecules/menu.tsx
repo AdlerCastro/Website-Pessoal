@@ -15,11 +15,11 @@ export default function Menu() {
           <MenuIcon size={44} className='w-11' />
         </SheetTrigger>
         <SheetContent
-          className='box-content rounded-s-2xl border-none bg-black px-[1.875rem] py-[3.125rem]'
+          className='box-content h-full gap-20 rounded-s-2xl border-none bg-black px-[1.875rem] py-[3.125rem]'
           onOpenAutoFocus={(event) => event?.preventDefault()}
         >
           <DialogTitle className='hidden' />
-          <div className='z-20 flex flex-col gap-[2.5rem] self-start'>
+          <div className='z-20 flex h-full flex-col gap-[2.5rem] self-start overflow-y-auto'>
             <Link
               href={`#${SECTIONS.About}`}
               className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
@@ -65,7 +65,7 @@ export default function Menu() {
             <a
               href='/cv-adler-castro.pdf'
               download
-              className='border-primary-500 text-primary-400 hover:bg-primary-500/10 flex items-center justify-between rounded-lg border px-4 py-3 text-lg font-bold transition-colors'
+              className='flex items-center justify-between rounded-lg border border-primary-500 px-4 py-3 text-lg font-bold text-primary-400 transition-colors hover:bg-primary-500/10'
             >
               ↓ Currículo
               <ArrowRight size={27} className='w-7' />
