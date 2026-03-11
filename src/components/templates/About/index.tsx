@@ -25,10 +25,7 @@ export default function About() {
   });
 
   return (
-    <div
-      id={SECTIONS.About}
-      className='flex w-full items-center justify-center bg-about'
-    >
+    <div id={SECTIONS.About} className='flex w-full justify-center bg-about'>
       <Container>
         {/* Stats Section */}
         <div

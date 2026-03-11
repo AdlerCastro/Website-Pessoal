@@ -25,9 +25,9 @@ export default function Experience() {
   return (
     <div
       id={SECTIONS.Experience}
-      className='bg-experience flex w-full items-center justify-center py-20'
+      className='bg-experience flex w-full justify-center'
     >
-      <Container className='lg:mt-10'>
+      <Container>
         <div
           ref={(el) => {
             animatedElementsRef.current[0] = el;

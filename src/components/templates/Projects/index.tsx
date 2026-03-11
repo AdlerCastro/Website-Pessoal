@@ -7,9 +7,9 @@ export default function Projects() {
   return (
     <div
       id={SECTIONS.Projects}
-      className='flex w-full items-center justify-center bg-projects'
+      className='flex w-full justify-center bg-projects'
     >
-      <Container className='lg:mt-32'>
+      <Container>
         <Typograph.Title>Projetos desenvolvidos</Typograph.Title>
         <CarouselProjects />
       </Container>

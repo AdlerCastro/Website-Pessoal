@@ -40,9 +40,9 @@ export default function Technologies() {
   return (
     <div
       id={SECTIONS.Technologies}
-      className='flex w-full items-center justify-center bg-technologies py-20'
+      className='flex w-full justify-center bg-technologies'
     >
-      <Container className='lg:mt-10'>
+      <Container>
         <div
           ref={(el) => {
             animatedElementsRef.current[0] = el;

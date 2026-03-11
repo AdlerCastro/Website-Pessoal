@@ -23,7 +23,7 @@ export default function Contact() {
   return (
     <div
       id={SECTIONS.Contacts}
-      className='flex w-full items-center justify-center bg-contact transition-all duration-300 ease-in-out'
+      className='flex w-full justify-center bg-contact transition-all duration-300 ease-in-out'
     >
       <Container className='mb-20'>
         <div
