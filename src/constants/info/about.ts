@@ -1,18 +1,21 @@
 export const ABOUT = {
   content: [
-    'Cursando Engenharia de Computação no Centro Universitário do Estado do Pará, graduando do 5° semestre, com experiências em desenvolvimento de software front-end.',
-    'Designado a Presidente do Centro Acadêmico de Engenharia de Computação decorrente as habilidades de oratória, comunicação, dedicação, e experiências de trabalho em equipe relacionadas a gestão, liderança e desempenho, observadas ao longo da carreira universitária.',
-    'Conhecimento técnico e habilidades adquiridos em experiências no Escritório de Engenharia do Cesupa, grupo de pesquisa no qual habilidades profissionais na área de programação, eletrônica e embarcados são desenvolvidas.',
-    'Além disso, sou membro do Gamelab, grupo universitário de estudo e pesquisa que possibilita a prática e vivência de técnicas de programação na área de Desenvolvimento de Jogos Digitais e soluções gamificadas.',
+    'Full-Stack Developer com 2 anos de experiência em desenvolvimento de aplicações web modernas e infraestrutura cloud. Atuei na construção de sistemas críticos em ambiente governamental, onde reduzi processamentos que levavam semanas para apenas minutos através de soluções automatizadas.',
+    'Graduando em Engenharia de Computação pelo CESUPA (conclusão: 2027), com domínio em TypeScript, React/Next.js, Node.js e arquiteturas escaláveis (DDD, Clean Architecture, microsserviços). Experiência sólida em práticas DevOps: Docker, CI/CD, Kubernetes e cloud (AWS, GCP).',
+    'Atualmente disponível para projetos freelancer nas áreas de desenvolvimento web, automações e sistemas complexos.',
   ],
   competences: [
-    'Conhecimento aplicado em desenvolvimento fullstack.',
-    'Conhecimento aplicado de Microsoft 365: Excel, Word, PowerPoint.',
-    'Conhecimento aplicado em modelagem no SolidWorks e AutoCad.',
-    'Inglês técnico.',
-    'Certificado em ReactJS pela Rocketseat.',
-    'Certificado em NextJS pela Rocketseat.',
-    'Metodologia ágil (Scrum, Kanban).',
-    'Conhecimento aplicado em eletrônica e sistemas embarcados.',
+    'Comunicação técnica clara',
+    'Trabalho em equipe ágil (Scrum/Kanban)',
+    'Autonomia e gestão de entregas',
+    'Inglês profissional (leitura, escrita e conversação técnica)',
+    'Documentação técnica',
+    'Code Review e boas práticas',
+  ],
+  stats: [
+    { value: '2+', label: 'Anos de experiência' },
+    { value: '100%', label: 'Eliminação de trabalho manual na PMPA' },
+    { value: '5min', label: 'Processamento antes levava 3–4 semanas' },
+    { value: '2', label: 'Empresas atendidas' },
   ],
 };

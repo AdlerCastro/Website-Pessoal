@@ -1,58 +1,82 @@
-export const TECHNOLOGIES = [
+export const TECH_CATEGORIES = [
   {
-    title: 'Next.js',
-    description:
-      'Next.js é um framework baseado em React que adiciona funcionalidades avançadas, como renderização do lado do servidor (SSR) e geração de sites estáticos (SSG), proporcionando uma melhor performance e SEO aprimorado para as aplicações.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nextjs-colored.svg',
+    category: 'Frontend',
+    icon: '🖥️',
+    techs: [
+      { name: 'React.js', level: 'Avançado' },
+      { name: 'Next.js', level: 'Avançado' },
+      { name: 'TypeScript', level: 'Avançado' },
+      { name: 'Tailwind CSS', level: 'Avançado' },
+      { name: 'Vite.js', level: 'Intermediário' },
+      { name: 'JavaScript (ES6+)', level: 'Avançado' },
+    ],
   },
   {
-    title: 'React',
-    description:
-      'Para o frontend, uso principalmente o framework e React.js. O React.js é uma biblioteca JavaScript popular para construir interfaces de usuário, permitindo a criação de componentes reutilizáveis e a construção de interfaces de forma declarativa.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg',
+    category: 'Backend',
+    icon: '⚙️',
+    techs: [
+      { name: 'Node.js', level: 'Avançado' },
+      { name: 'Fastify', level: 'Avançado' },
+      { name: 'NestJS', level: 'Intermediário' },
+      { name: 'Express.js', level: 'Intermediário' },
+      { name: 'Python / FastAPI', level: 'Intermediário' },
+      { name: 'REST APIs', level: 'Avançado' },
+    ],
   },
   {
-    title: 'Tailwind CSS',
-    description:
-      'Tailwind CSS é uma estrutura CSS de utilitários de baixo nível que permite a criação de designs personalizados sem sair do HTML. Tailwind CSS é altamente configurável e é usado para criar designs modernos e responsivos.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/tailwindcss-colored.svg',
+    category: 'Banco de Dados',
+    icon: '🗄️',
+    techs: [
+      { name: 'PostgreSQL', level: 'Avançado' },
+      { name: 'Redis', level: 'Intermediário' },
+      { name: 'MongoDB', level: 'Básico' },
+      { name: 'Prisma ORM', level: 'Avançado' },
+      { name: 'TypeORM', level: 'Intermediário' },
+    ],
   },
   {
-    title: 'Docker',
-    description:
-      'Docker é uma plataforma de código aberto que facilita a criação, implantação e execução de aplicativos em contêineres. Os contêineres permitem que um desenvolvedor empacote um aplicativo com todas as partes necessárias, como bibliotecas e outras dependências, e implantá-lo como uma única unidade.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/docker-colored.svg',
+    category: 'DevOps & Cloud',
+    icon: '☁️',
+    techs: [
+      { name: 'Docker', level: 'Avançado' },
+      { name: 'GitHub Actions', level: 'Intermediário' },
+      { name: 'AWS (EC2, S3, RDS, Lambda)', level: 'Intermediário' },
+      { name: 'Google Cloud Platform', level: 'Intermediário' },
+      { name: 'Kubernetes', level: 'Básico' },
+      { name: 'Terraform', level: 'Básico' },
+      { name: 'CI/CD', level: 'Intermediário' },
+    ],
   },
   {
-    title: 'Node.js',
-    description:
-      'Node.js é um ambiente de tempo de execução JavaScript de código aberto que permite aos desenvolvedores criar aplicativos de rede escaláveis. O Node.js é usado para criar aplicativos de back-end, APIs e muito mais.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg',
+    category: 'Testes & Qualidade',
+    icon: '🧪',
+    techs: [
+      { name: 'Jest', level: 'Intermediário' },
+      { name: 'Vitest', level: 'Intermediário' },
+      { name: 'Testing Library', level: 'Intermediário' },
+      { name: 'TDD', level: 'Intermediário' },
+    ],
   },
   {
-    title: 'PostgreSQL',
-    description:
-      'PostgreSQL é um sistema de gerenciamento de banco de dados relacional de código aberto e gratuito. O PostgreSQL é conhecido por sua confiabilidade e integridade de dados, além de ser compatível com várias plataformas.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/postgresql-colored.svg',
-  },
-  {
-    title: 'Typescript',
-    description:
-      'TypeScript é um superconjunto de JavaScript desenvolvido pela Microsoft que adiciona tipagem estática ao JavaScript. O TypeScript é projetado para o desenvolvimento de aplicativos em grande escala e é usado por muitas empresas e desenvolvedores em todo o mundo.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/typescript-colored.svg',
-  },
-  {
-    title: 'Git',
-    description:
-      'Git é um sistema de controle de versão distribuído de código aberto e gratuito. O Git é amplamente utilizado por desenvolvedores para rastrear mudanças no código, colaborar em projetos e muito mais.',
-    image:
-      'https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/git-colored.svg',
+    category: 'Segurança & Arquitetura',
+    icon: '🔐',
+    techs: [
+      { name: 'JWT / OAuth', level: 'Avançado' },
+      { name: 'RBAC', level: 'Avançado' },
+      { name: 'DDD', level: 'Avançado' },
+      { name: 'Clean Architecture', level: 'Avançado' },
+      { name: 'OWASP Top 10', level: 'Intermediário' },
+    ],
   },
 ];
+
+// Mantendo compatibilidade com o código existente
+export const TECHNOLOGIES = TECH_CATEGORIES.flatMap((category) =>
+  category.techs.map((tech) => ({
+    title: tech.name,
+    description: `Nível: ${tech.level}`,
+    image: '',
+    category: category.category,
+    level: tech.level,
+  })),
+);
