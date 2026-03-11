@@ -49,28 +49,62 @@ export default function Header() {
           animatedElementsRef.current[1] = el;
         }}
         className={cn(
-          'absolute hidden w-fit items-center justify-center gap-12 rounded-full bg-black/90 px-9 py-5 transition-all duration-500 ease-in-out lg:flex',
+          'absolute hidden w-fit items-center justify-center gap-8 rounded-full bg-black/90 px-9 py-5 transition-all duration-500 ease-in-out lg:flex',
           triggered ? 'shadow-header' : 'bg-transparent',
           isVisible[1]
             ? 'translate-y-0 opacity-100 shadow-header lg:flex'
             : '-translate-y-10 opacity-0',
         )}
       >
-        <Link href={`#${SECTIONS.Home}`} className='text-white'>
+        <Link
+          href={`#${SECTIONS.Home}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
           Início
         </Link>
-        <Link href={`#${SECTIONS.About}`} className='text-white'>
+        <Link
+          href={`#${SECTIONS.About}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
           Sobre
         </Link>
-        <Link href={`#${SECTIONS.Technologies}`} className='text-white'>
+        <Link
+          href={`#${SECTIONS.Experience}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
+          Experiência
+        </Link>
+        <Link
+          href={`#${SECTIONS.Technologies}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
           Tecnologias
         </Link>
-        <Link href={`#${SECTIONS.Projects}`} className='text-white'>
+        <Link
+          href={`#${SECTIONS.Projects}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
           Projetos
         </Link>
-        <Link href={`#${SECTIONS.Contacts}`} className='text-white'>
-          Contatos
+        <Link
+          href={`#${SECTIONS.Services}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
+          Serviços
         </Link>
+        <Link
+          href={`#${SECTIONS.Contacts}`}
+          className='focus-visible:text-primary-700 hover:text-primary-700 text-white'
+        >
+          Contato
+        </Link>
+        <a
+          href='/cv-adler-castro.pdf'
+          download
+          className='hover:bg-primary-900/20 flex items-center gap-2 rounded-lg border border-white px-4 py-2 text-sm font-medium text-white transition-colors'
+        >
+          ↓ Currículo
+        </a>
       </nav>
     </header>
   );

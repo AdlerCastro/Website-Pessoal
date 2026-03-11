@@ -18,9 +18,8 @@ export default function Menu() {
           className='box-content rounded-s-2xl border-none bg-black px-[1.875rem] py-[3.125rem]'
           onOpenAutoFocus={(event) => event?.preventDefault()}
         >
-          <DialogTitle className='hidden' />{' '}
-          {/* Adicionado decorrente a um erro de acessibilidade disparado na página */}
-          <div className='z-20 flex flex-col gap-[3.125rem] self-start'>
+          <DialogTitle className='hidden' />
+          <div className='z-20 flex flex-col gap-[2.5rem] self-start'>
             <Link
               href={`#${SECTIONS.About}`}
               className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
@@ -29,10 +28,10 @@ export default function Menu() {
               <ArrowRight size={27} className='w-7' />
             </Link>
             <Link
-              href={`#${SECTIONS.Technologies}`}
+              href={`#${SECTIONS.Experience}`}
               className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
             >
-              Tecnologias
+              Experiência
               <ArrowRight size={27} className='w-7' />
             </Link>
             <Link
@@ -43,12 +42,34 @@ export default function Menu() {
               <ArrowRight size={27} className='w-7' />
             </Link>
             <Link
+              href={`#${SECTIONS.Services}`}
+              className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
+            >
+              Serviços
+              <ArrowRight size={27} className='w-7' />
+            </Link>
+            <Link
+              href={`#${SECTIONS.Technologies}`}
+              className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
+            >
+              Tecnologias
+              <ArrowRight size={27} className='w-7' />
+            </Link>
+            <Link
               href={`#${SECTIONS.Contacts}`}
               className='flex items-center justify-between text-lg font-bold text-white invalid:text-white/70 hover:text-white/40 focus-visible:text-white/40 active:text-white'
             >
-              Contatos
+              Contato
               <ArrowRight size={27} className='w-7' />
             </Link>
+            <a
+              href='/cv-adler-castro.pdf'
+              download
+              className='border-primary-500 text-primary-400 hover:bg-primary-500/10 flex items-center justify-between rounded-lg border px-4 py-3 text-lg font-bold transition-colors'
+            >
+              ↓ Currículo
+              <ArrowRight size={27} className='w-7' />
+            </a>
           </div>
         </SheetContent>
       </div>

@@ -13,7 +13,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         target={target}
         className={cn(
           variant,
-          'font-Copperplate invalid:text-yellow_100/70 hover:text-yellow_100 focus-visible:text-yellow_100 active:text-yellow_300 px-2 py-1 text-sm font-normal text-white outline-none ring-0 transition-all duration-150',
+          'font-Copperplate invalid:text-primary-700/70 px-2 py-1 text-sm font-normal text-white outline-none ring-0 transition-all duration-150 focus-visible:underline',
           className,
         )}
         {...props}

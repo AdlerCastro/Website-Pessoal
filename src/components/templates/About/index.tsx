@@ -5,11 +5,11 @@ import { Typograph } from '@/components/atoms/typograph';
 import CardParallax from '@/components/molecules/cardParallax';
 import { ABOUT } from '@/constants/info/about';
 import { SECTIONS } from '@/enums/sections.enum';
-import { useDivideArray } from '@/hooks/use-divide-array.hook';
 import { cn } from '@/lib/utils';
 import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
 import Eu from 'public/images/Eu.jpg';
 import { useRef, useState } from 'react';
+import { motion } from 'framer-motion';
 
 export default function About() {
   const [isVisible, setIsVisible] = useState<boolean[]>(Array(5).fill(false));
@@ -24,16 +24,40 @@ export default function About() {
     animatedElementsRef,
   });
 
-  const { firstHalf, secondHalf } = useDivideArray({
-    array: ABOUT.competences,
-  });
-
   return (
     <div
       id={SECTIONS.About}
       className='flex w-full items-center justify-center bg-about'
     >
       <Container>
+        {/* Stats Section */}
+        <div
+          ref={(el) => {
+            animatedElementsRef.current[4] = el;
+          }}
+          className={cn(
+            'mb-12 grid grid-cols-2 gap-4 transition-all duration-300 ease-in-out md:grid-cols-4',
+            isVisible[4]
+              ? 'translate-y-0 opacity-100'
+              : '-translate-y-10 opacity-0',
+          )}
+        >
+          {ABOUT.stats.map((stat, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              transition={{ delay: index * 0.1 }}
+              className='flex flex-col items-center rounded-lg bg-white/5 p-4 text-center backdrop-blur-sm'
+            >
+              <span className='text-primary-400 text-3xl font-bold md:text-4xl'>
+                {stat.value}
+              </span>
+              <span className='text-sm text-gray-400'>{stat.label}</span>
+            </motion.div>
+          ))}
+        </div>
+
         <div
           ref={(el) => {
             animatedElementsRef.current[0] = el;
@@ -50,11 +74,6 @@ export default function About() {
             alt='Foto de Perfil'
             className='size-[250px] self-center lg:hidden'
           />
-          {/* <Image
-            src={Eu}
-            alt='Foto de Perfil'
-            className='block h-[250px] w-[250px] self-center rounded-full p-5 transition-all duration-300 ease-in-out lg:hidden'
-          /> */}
           <Typograph.Title className='text-center sm:text-start'>
             Quem é Adler Castro?
           </Typograph.Title>
@@ -92,16 +111,6 @@ export default function About() {
                 alt='Foto de Perfil'
                 className='hidden h-[300px] w-[300px] lg:flex'
               />
-              {/* <div className='absolute inset-0 z-[2] mx-auto mt-5 hidden h-[300px] w-[300px] rounded-full transition-all duration-500 ease-in-out group-hover/profile:h-[200px] group-hover/profile:w-[200px] lg:block'>
-                <Image
-                  src={Eu}
-                  alt='Foto de Perfil'
-                  className='h-full w-full rounded-full group-hover/profile:border group-hover/profile:border-solid group-hover/profile:border-paragraph'
-                />
-              </div> */}
-              {/* <div className='absolute inset-0 flex h-0 w-full items-end justify-center overflow-hidden rounded-lg bg-zinc-800 transition-all duration-300 ease-in-out group-hover/profile:h-full'>
-                <p>Funciona</p>
-              </div> */}
             </div>
           </div>
         </div>
@@ -116,30 +125,16 @@ export default function About() {
               : '-translate-y-10 opacity-0',
           )}
         >
-          <h2 className='mb-2 text-start text-xl'>Principais Competências</h2>
-          <div className='grid grid-cols-2 gap-4 text-center text-sm'>
-            <div className='flex flex-col items-center gap-4'>
-              {firstHalf.map((competence, index) => (
-                <Typograph.Paragraph
-                  asChild
-                  key={index}
-                  className='max-w-[30rem] rounded-md border border-solid border-paragraph p-2 transition-all duration-300 hover:scale-105'
-                >
-                  <p>{competence}</p>
-                </Typograph.Paragraph>
-              ))}
-            </div>
-            <div className='flex flex-col items-center gap-4'>
-              {secondHalf.map((competence, index) => (
-                <Typograph.Paragraph
-                  asChild
-                  key={index}
-                  className='max-w-[30rem] rounded-md border border-solid border-paragraph p-2 transition-all duration-300 hover:scale-105'
-                >
-                  <p>{competence}</p>
-                </Typograph.Paragraph>
-              ))}
-            </div>
+          <h2 className='mb-2 text-start text-xl'>Soft Skills</h2>
+          <div className='flex flex-wrap gap-3'>
+            {ABOUT.competences.map((competence, index) => (
+              <span
+                key={index}
+                className='border-primary-500/30 bg-primary-500/10 hover:border-primary-500 rounded-lg border px-4 py-2 text-sm text-white transition-all duration-300 hover:scale-105'
+              >
+                {competence}
+              </span>
+            ))}
           </div>
         </div>
       </Container>
