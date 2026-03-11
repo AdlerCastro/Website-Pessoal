@@ -33,8 +33,15 @@
     --background-size-hero: 300% 300%;
     --animation-bg-hero: gradient 15s ease infinite;
 
+    /* Section Experience */
+    --background-color-xp: linear-gradient(#09203f, #160d3a 90%);
+
     /* Section Technologies */
-    --background-color-tech: linear-gradient(#09203f, #160d3a 90%);
+    --background-color-tech: linear-gradient(
+      to bottom,
+      #160d3a,
+      #160d3a 100%
+    );
 
     /* Section Projects */
     --background-color-projects: linear-gradient(
@@ -91,4 +98,16 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Typography */
+h1,
+h2 {
+  font-family: var(--font-montserrat);
+  font-optical-sizing: auto;
+}
+
+body {
+  font-family: var(--font-inter);
+  -webkit-font-smoothing: antialiased;
 }

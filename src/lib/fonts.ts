@@ -1,21 +1,20 @@
-import { Roboto, Poppins } from 'next/font/google';
+import { Inter, Montserrat } from 'next/font/google';
 
-const poppins = Poppins({
-  weight: '400',
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-poppins',
+  variable: '--font-inter',
+  display: 'swap',
 });
 
-const roboto = Roboto({
-  display: 'swap',
+const montserrat = Montserrat({
   subsets: ['latin'],
-  variable: '--font-roboto',
-  weight: ['300', '400'],
+  variable: '--font-montserrat',
+  display: 'swap',
 });
 
 const fonts = {
-  poppins,
-  roboto,
+  inter,
+  montserrat,
 };
 
 export default fonts;

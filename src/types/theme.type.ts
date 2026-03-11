@@ -14,8 +14,8 @@ export type ThemeType = {
     gray_100: string;
   };
   fontFamily: {
-    Poppins: [string, string];
-    Roboto: [string, string];
+    sans: string[];
+    display: string[];
   };
   backgroundColor: {
     default: string;
@@ -24,6 +24,7 @@ export type ThemeType = {
     borderNav: string;
     about: string;
     hero: string;
+    experience: string;
     projects: string;
     'image-project': string;
     technologies: string;

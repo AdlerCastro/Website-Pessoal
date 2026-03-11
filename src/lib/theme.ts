@@ -16,15 +16,16 @@ export const light: ThemeType = {
     gray_100: '#383838',
   },
   fontFamily: {
-    Poppins: ['var(--font-poppins)', 'sans-serif'],
-    Roboto: ['var(--font-roboto)', 'sans-serif'],
+    sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+    display: ['var(--font-montserrat)', 'system-ui', 'sans-serif'],
   },
   backgroundColor: {
     default: 'var(--background-color-default)',
   },
   backgroundImage: {
-    about: 'var(--background-color-about)',
     hero: 'var(--background-color-hero)',
+    about: 'var(--background-color-about)',
+    experience: 'var(--background-color-xp)',
     projects: 'var(--background-color-projects)',
     'image-project': 'var(--background-color-image-project)',
     borderNav: 'var(--color-border-nav)',
