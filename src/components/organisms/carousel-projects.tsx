@@ -20,7 +20,7 @@ const getStatusColor = (status: string) => {
     case 'Em produção':
       return 'bg-blue-500';
     case 'Em desenvolvimento':
-      return 'bg-yellow-500';
+      return 'bg-amber-500/80 border border-amber-500/30';
     default:
       return 'bg-gray-500';
   }
@@ -90,6 +90,13 @@ export default function CarouselProjects() {
                   {project.title}
                 </Typograph.Subtitle>
 
+                {/* Role badge */}
+                {'role' in project && project.role && (
+                  <span className='mt-2 inline-block text-xs font-medium text-gray-400'>
+                    {project.role}
+                  </span>
+                )}
+
                 <div className='mt-4 flex flex-col gap-3'>
                   {project.description.map((description, idx) => (
                     <Typograph.Paragraph
@@ -100,6 +107,27 @@ export default function CarouselProjects() {
                     </Typograph.Paragraph>
                   ))}
                 </div>
+
+                {/* Award - Elogio Oficial */}
+                {'award' in project && project.award && (
+                  <div className='mt-4 rounded-lg border border-amber-500/30 bg-amber-500/5 p-3'>
+                    <div className='mb-2 flex items-center gap-2'>
+                      <span className='text-base text-amber-400'>🏅</span>
+                      <span className='text-xs font-semibold uppercase tracking-wide text-amber-400'>
+                        {project.award.type}
+                      </span>
+                    </div>
+                    <p className='mb-1 text-xs leading-relaxed text-gray-400'>
+                      <span className='font-medium text-gray-300'>
+                        {project.award.issuer}
+                      </span>{' '}
+                      · {project.award.document}
+                    </p>
+                    <p className='text-xs italic leading-relaxed text-gray-500'>
+                      &quot;{project.award.citation}&quot;
+                    </p>
+                  </div>
+                )}
 
                 {/* Highlights */}
                 {project.highlights && (
@@ -114,6 +142,44 @@ export default function CarouselProjects() {
                       </li>
                     ))}
                   </ul>
+                )}
+
+                {/* Domains - Grid 2x2 */}
+                {'domains' in project && project.domains && (
+                  <div className='mt-6 grid grid-cols-2 gap-3'>
+                    {project.domains.map((domain) => (
+                      <div
+                        key={domain.title}
+                        className='rounded-lg border border-white/10 bg-white/5 p-3'
+                      >
+                        <p className='mb-1 text-sm font-medium text-white'>
+                          {domain.icon} {domain.title}
+                        </p>
+                        <ul className='space-y-0.5 text-xs text-gray-400'>
+                          {domain.items.map((item) => (
+                            <li key={item}>• {item}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    ))}
+                  </div>
+                )}
+
+                {/* Metrics */}
+                {'metrics' in project && project.metrics && (
+                  <div className='mt-6 flex flex-wrap justify-center gap-2'>
+                    {project.metrics.map((metric) => (
+                      <div
+                        key={metric.label}
+                        className='rounded-lg border border-primary-500/20 bg-primary-500/10 px-3 py-1.5 text-center'
+                      >
+                        <p className='text-sm font-bold text-primary-400'>
+                          {metric.value}
+                        </p>
+                        <p className='text-xs text-gray-500'>{metric.label}</p>
+                      </div>
+                    ))}
+                  </div>
                 )}
 
                 {/* Stack */}
