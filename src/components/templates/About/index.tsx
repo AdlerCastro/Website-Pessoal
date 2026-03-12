@@ -7,7 +7,7 @@ import { ABOUT } from '@/constants/info/about';
 import { SECTIONS } from '@/enums/sections.enum';
 import { cn } from '@/lib/utils';
 import { AnimatedElementsTypes, HandleObserver } from '@/utils/scrollAnims';
-import Eu from 'public/images/Eu.jpg';
+import Eu from 'public/images/Eu.jpeg';
 import { useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 
