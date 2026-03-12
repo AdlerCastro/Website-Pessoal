@@ -33,7 +33,7 @@ export default function Footer() {
               animatedElementsRef.current[0] = el;
             }}
             className={cn(
-              'flex max-w-[30rem] flex-col items-center gap-10 transition-all duration-300 ease-in-out',
+              'flex max-w-[30rem] flex-col items-center gap-5 transition-all duration-300 ease-in-out',
               isVisible[0]
                 ? 'translate-y-0 opacity-100'
                 : '-translate-y-10 opacity-0',
@@ -52,7 +52,7 @@ export default function Footer() {
           </div>
           <div
             className={cn(
-              'flex flex-col items-center justify-center gap-10 transition-all duration-300 ease-in-out',
+              'flex flex-col items-center justify-center transition-all duration-300 ease-in-out',
               isVisible[0]
                 ? 'translate-y-0 opacity-100'
                 : '-translate-y-10 opacity-0',

@@ -32,7 +32,7 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
     >
       {/* Badge de destaque */}
       {service.highlight && (
-        <span className='bg-primary-500 absolute -top-3 left-1/2 -translate-x-1/2 rounded-full px-3 py-1 text-xs font-medium text-white'>
+        <span className='absolute -top-3 left-1/2 -translate-x-1/2 rounded-full bg-primary-500 px-3 py-1 text-xs font-medium text-white'>
           Mais popular
         </span>
       )}
@@ -53,21 +53,21 @@ export default function ServiceCard({ service, index }: ServiceCardProps) {
             key={idx}
             className='flex items-start gap-2 text-sm text-gray-300'
           >
-            <span className='text-primary-400 mt-1'>✓</span>
+            <span className='mt-1 text-primary-400'>✓</span>
             {item}
           </li>
         ))}
       </ul>
 
       {/* Preço */}
-      <p className='text-primary-400 mb-4 text-lg font-semibold'>
+      <p className='mb-4 text-lg font-semibold text-primary-400'>
         {service.price}
       </p>
 
       {/* CTA */}
       <Link
         href={`#${SECTIONS.Contacts}`}
-        className='bg-primary-600 hover:bg-primary-700 w-full rounded-lg py-3 text-center font-medium text-white transition-colors'
+        className='w-full rounded-lg bg-primary-600 py-3 text-center font-medium text-white transition-colors hover:bg-primary-700'
       >
         Solicitar orçamento
       </Link>
