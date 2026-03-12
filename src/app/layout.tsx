@@ -3,6 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import fonts from '@/lib/fonts';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
+import ContactButton from '@/components/atoms/contact-button';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-adler.vercel.app'),
@@ -54,6 +55,15 @@ export default function RootLayout({
     >
       <body className='bg-default font-sans text-white'>
         {children}
+        <ContactButton
+          variant='icon'
+          size='icon'
+          href='https://wa.me/5591989604352?text=Olá Adler, vim pelo seu portfólio e gostaria de conversar sobre um projeto.'
+          target='_blank'
+          rel='noopener noreferrer'
+          aria-label='Chamar no WhatsApp'
+          className='fixed bottom-8 right-6 z-50 size-16 lg:right-8'
+        />
         <Toaster />
         <SpeedInsights />
       </body>
