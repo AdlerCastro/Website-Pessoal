@@ -48,16 +48,6 @@ export default function Contact() {
             Pronto para trocar ideias ou iniciar um projeto? Fique à vontade
             para entrar em contato!
           </Typograph.Paragraph>
-
-          {/* Link direto para WhatsApp */}
-          <a
-            href='https://wa.me/5591989604352?text=Olá Adler, vim pelo seu portfólio e gostaria de conversar sobre um projeto.'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition-colors hover:bg-green-700'
-          >
-            💬 Chamar no WhatsApp
-          </a>
         </div>
         <FormContact />
       </Container>

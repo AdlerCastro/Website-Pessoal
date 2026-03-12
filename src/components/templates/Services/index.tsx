@@ -107,7 +107,7 @@ export default function Services() {
             ]}
             className='w-full'
           >
-            <CarouselContent className='-ml-2 md:-ml-4'>
+            <CarouselContent className='-ml-2 pt-4 md:-ml-4'>
               {SERVICES.map((service, index) => (
                 <CarouselItem
                   key={service.id}
@@ -128,25 +128,13 @@ export default function Services() {
                 className={cn(
                   'h-2.5 w-2.5 rounded-full transition-all duration-300',
                   current === index
-                    ? 'bg-primary-500 w-6'
+                    ? 'w-6 bg-primary-500'
                     : 'bg-gray-500 hover:bg-gray-400',
                 )}
                 aria-label={`Ir para slide ${index + 1}`}
               />
             ))}
           </div>
-        </div>
-
-        {/* WhatsApp CTA */}
-        <div className='mt-12 text-center'>
-          <a
-            href='https://wa.me/5591989604352?text=Olá Adler, vim pelo seu portfólio e gostaria de conversar sobre um projeto.'
-            target='_blank'
-            rel='noopener noreferrer'
-            className='inline-flex items-center gap-2 rounded-lg bg-green-600 px-6 py-3 font-medium text-white transition-colors hover:bg-green-700'
-          >
-            💬 Chamar no WhatsApp
-          </a>
         </div>
       </Container>
     </div>
