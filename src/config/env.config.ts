@@ -4,6 +4,7 @@ const envSchema = z.object({
   NODE_ENV: z
     .enum(['production', 'development', 'test'])
     .default('development'),
+  NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: z.string(),
   SMTP_HOST: z.string(),
   SMTP_PORT: z.coerce.number(),
   SMTP_USER: z.string(),

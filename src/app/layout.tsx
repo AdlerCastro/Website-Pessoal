@@ -1,9 +1,12 @@
 import type { Metadata } from 'next';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from '@vercel/analytics/next';
 import fonts from '@/lib/fonts';
 import './globals.css';
 import { Toaster } from '@/components/ui/sonner';
 import ContactButton from '@/components/atoms/contact-button';
+import { env } from '@/config/env.config';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://portfolio-adler.vercel.app'),
@@ -66,6 +69,8 @@ export default function RootLayout({
         />
         <Toaster />
         <SpeedInsights />
+        <GoogleAnalytics gaId={env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
+        <Analytics />
       </body>
     </html>
   );
