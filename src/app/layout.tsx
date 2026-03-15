@@ -9,10 +9,10 @@ import ContactButton from '@/components/atoms/contact-button';
 import { env } from '@/config/env.config';
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-adler.vercel.app'),
+  metadataBase: new URL('https://adlercastro.com.br'),
   title: 'Adler Castro — Full-Stack Developer & DevSecOps',
   description:
-    'Full-Stack Developer especializado em TypeScript, React, Next.js e Node.js. 2 anos de experiência em sistemas críticos. Disponível para projetos freelancer em Belém, PA.',
+    'Full-Stack Developer especializado em TypeScript, React, Next.js e Node.js. 2 anos de experiência construindo sistemas críticos em produção. Disponível para projetos freelancer e oportunidades remotas.',
   keywords: [
     'desenvolvedor full-stack',
     'freelancer desenvolvedor',
@@ -22,13 +22,22 @@ export const metadata: Metadata = {
     'Node.js',
     'Belém Pará',
     'DevSecOps',
+    'desenvolvedor remoto',
+    'Fastify',
+    'PostgreSQL',
+    'Docker',
+    'desenvolvedor backend',
+    'desenvolvedor frontend',
+    'Adler Castro',
+    'portfólio desenvolvedor',
+    'sistemas web',
   ],
   authors: [{ name: 'Adler Castro' }],
   openGraph: {
     title: 'Adler Castro — Full-Stack Developer',
     description:
       'Desenvolvedor Full-Stack com 2 anos de experiência. React · Next.js · Node.js · TypeScript.',
-    url: 'https://portfolio-adler.vercel.app',
+    url: 'https://adlercastro.com.br',
     type: 'website',
     images: [
       {
@@ -43,6 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Adler Castro — Full-Stack Developer',
     description: 'React · Next.js · Node.js · TypeScript · DevSecOps',
+    images: ['/og-image.png'],
   },
 };
 
@@ -69,9 +79,9 @@ export default function RootLayout({
         />
         <Toaster />
         <SpeedInsights />
-        <GoogleAnalytics gaId={env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
         <Analytics />
       </body>
+      <GoogleAnalytics gaId={env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID} />
     </html>
   );
 }
